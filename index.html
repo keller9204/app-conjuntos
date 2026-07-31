@@ -524,15 +524,44 @@
             <div class="bg-white p-5 rounded-2xl shadow-sm border border-slate-100 space-y-4">
                 <h3 class="text-lg font-bold text-slate-800 flex items-center gap-2">
                     <i class="fa-solid fa-dollar-sign text-emerald-600"></i> Tarifas Parqueadero
+                    <span class="text-xs font-normal text-slate-400 ml-1">(COP por minuto)</span>
                 </h3>
                 <div class="grid grid-cols-2 gap-3">
                     <div>
-                        <label for="tarifaCarro" class="block text-xs font-bold uppercase tracking-wider text-slate-500 mb-1">Hora Carro (COP)</label>
-                        <input id="tarifaCarro" type="number" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-emerald-500 font-semibold text-slate-800">
+                        <label for="tarifaCarro" class="block text-xs font-bold uppercase tracking-wider text-slate-500 mb-1">Minuto Carro (COP)</label>
+                        <input id="tarifaCarro" type="number" min="0" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-emerald-500 font-semibold text-slate-800">
                     </div>
                     <div>
-                        <label for="tarifaMoto" class="block text-xs font-bold uppercase tracking-wider text-slate-500 mb-1">Hora Moto (COP)</label>
-                        <input id="tarifaMoto" type="number" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none">
+                        <label for="tarifaMoto" class="block text-xs font-bold uppercase tracking-wider text-slate-500 mb-1">Minuto Moto (COP)</label>
+                        <input id="tarifaMoto" type="number" min="0" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none">
+                    </div>
+                </div>
+                <!-- Tiempo de Gracia -->
+                <div class="bg-emerald-50 p-4 rounded-xl border border-emerald-100 space-y-3">
+                    <h4 class="text-xs font-bold text-emerald-700 uppercase tracking-wider flex items-center gap-2">
+                        <i class="fa-solid fa-hourglass-half"></i> Tiempo de Gracia (Minutos Gratis)
+                    </h4>
+                    <div class="grid grid-cols-2 gap-3">
+                        <div>
+                            <div class="flex items-center justify-between mb-1.5">
+                                <label class="text-xs font-bold uppercase tracking-wider text-slate-500">Carro</label>
+                                <label class="flex items-center gap-1.5 cursor-pointer select-none">
+                                    <input type="checkbox" id="activarGratisCarro" onchange="toggleGratis('carro')" class="w-3.5 h-3.5 accent-emerald-600">
+                                    <span class="text-[10px] font-bold text-emerald-700">Activar</span>
+                                </label>
+                            </div>
+                            <input id="minutosGratisCarro" type="number" min="0" placeholder="0 min" disabled class="w-full px-3 py-2 bg-white border border-slate-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500 disabled:bg-slate-100 disabled:opacity-50 disabled:cursor-not-allowed transition">
+                        </div>
+                        <div>
+                            <div class="flex items-center justify-between mb-1.5">
+                                <label class="text-xs font-bold uppercase tracking-wider text-slate-500">Moto</label>
+                                <label class="flex items-center gap-1.5 cursor-pointer select-none">
+                                    <input type="checkbox" id="activarGratisMoto" onchange="toggleGratis('moto')" class="w-3.5 h-3.5 accent-emerald-600">
+                                    <span class="text-[10px] font-bold text-emerald-700">Activar</span>
+                                </label>
+                            </div>
+                            <input id="minutosGratisMoto" type="number" min="0" placeholder="0 min" disabled class="w-full px-3 py-2 bg-white border border-slate-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500 disabled:bg-slate-100 disabled:opacity-50 disabled:cursor-not-allowed transition">
+                        </div>
                     </div>
                 </div>
                 <div>
@@ -562,14 +591,19 @@
                             <input id="nuevaZonaTarifa" type="number" placeholder="Ej. 10000" class="w-full px-3 py-2 bg-white border border-slate-200 rounded-lg text-xs">
                         </div>
                     </div>
-                    <button onclick="agregarZonaComun()" class="w-full py-2 bg-emerald-600 text-white text-xs font-bold rounded-lg transition hover:bg-emerald-700 shadow">
-                        Agregar Zona
+                    <button onclick="agregarZonaComun()" class="w-full py-2 bg-emerald-600 text-white text-xs font-bold rounded-lg transition hover:bg-emerald-700 shadow flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-plus"></i> Agregar Zona y Sincronizar con Sheet
                     </button>
                 </div>
                 <!-- Listado de zonas existentes -->
                 <div class="space-y-2">
-                    <h4 class="text-xs font-bold text-slate-500 uppercase tracking-wider">Zonas Registradas</h4>
-                    <ul id="listaZonasAdmin" class="divide-y divide-slate-100 max-h-40 overflow-y-auto">
+                    <div class="flex justify-between items-center">
+                        <h4 class="text-xs font-bold text-slate-500 uppercase tracking-wider">Zonas Registradas</h4>
+                        <button onclick="forzarSincronizacion()" class="text-[10px] text-emerald-600 font-bold flex items-center gap-1 hover:text-emerald-800 transition">
+                            <i class="fa-solid fa-arrows-rotate"></i> Sincronizar Sheet
+                        </button>
+                    </div>
+                    <ul id="listaZonasAdmin" class="divide-y divide-slate-100 max-h-48 overflow-y-auto">
                         <!-- Dinámico -->
                     </ul>
                 </div>
@@ -656,6 +690,9 @@
                 <div class="space-y-3">
                     <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2">
                         <h4 class="text-xs font-bold text-slate-500 uppercase tracking-wider">Usuarios Registrados en el Sistema</h4>
+                        <button onclick="forzarSincronizacion()" class="flex items-center gap-1.5 px-3 py-1.5 bg-emerald-50 hover:bg-emerald-100 text-emerald-700 text-xs font-bold rounded-lg border border-emerald-200 transition">
+                            <i class="fa-solid fa-arrows-rotate"></i> Refrescar desde Sheet
+                        </button>
                     </div>
                     <!-- Filtros de Rol -->
                     <div class="flex flex-wrap gap-1.5 pb-1">
@@ -841,9 +878,13 @@
             mudanzas: [],         // Módulo 3
             paquetes: [],         // Módulo 4
             config: {
-                tarifaCarro: 3000, 
-                tarifaMoto: 1500,
+                tarifaCarro: 50, 
+                tarifaMoto: 30,
                 correoDestino: 'admin@conjunto.com',
+                minutosGratisCarro: 0,
+                minutosGratisMoto: 0,
+                gratisCarroActivo: false,
+                gratisMotoActivo: false,
                 zonas: [
                     { nombre: 'Salón Social', tarifa: 150000 },
                     { nombre: 'Zona BBQ', tarifa: 50000 },
@@ -896,9 +937,13 @@
             if (!db.paquetes || !Array.isArray(db.paquetes)) db.paquetes = [];
             if (!db.config || typeof db.config !== 'object') {
                 db.config = {
-                    tarifaCarro: 3000, 
-                    tarifaMoto: 1500,
+                    tarifaCarro: 50, 
+                    tarifaMoto: 30,
                     correoDestino: 'admin@conjunto.com',
+                    minutosGratisCarro: 0,
+                    minutosGratisMoto: 0,
+                    gratisCarroActivo: false,
+                    gratisMotoActivo: false,
                     zonas: [
                         { nombre: 'Salón Social', tarifa: 150000 },
                         { nombre: 'Zona BBQ', tarifa: 50000 },
@@ -913,9 +958,13 @@
                     { nombre: 'Cancha Múltiple', tarifa: 20000 }
                 ];
             }
-            db.config.tarifaCarro = Number(db.config.tarifaCarro) || 3000;
-            db.config.tarifaMoto = Number(db.config.tarifaMoto) || 1500;
+            db.config.tarifaCarro = Number(db.config.tarifaCarro) || 50;
+            db.config.tarifaMoto = Number(db.config.tarifaMoto) || 30;
             db.config.correoDestino = db.config.correoDestino || 'admin@conjunto.com';
+            if (typeof db.config.minutosGratisCarro === 'undefined') db.config.minutosGratisCarro = 0;
+            if (typeof db.config.minutosGratisMoto === 'undefined') db.config.minutosGratisMoto = 0;
+            if (typeof db.config.gratisCarroActivo === 'undefined') db.config.gratisCarroActivo = false;
+            if (typeof db.config.gratisMotoActivo === 'undefined') db.config.gratisMotoActivo = false;
         }
 
         // --- INICIALIZACIÓN ---
@@ -947,18 +996,29 @@
             renderZonasAdminList();
             
             if (db && db.config) {
-                setElementValue('tarifaCarro', db.config.tarifaCarro || 3000);
-                setElementValue('tarifaMoto', db.config.tarifaMoto || 1500);
+                setElementValue('tarifaCarro', db.config.tarifaCarro || 50);
+                setElementValue('tarifaMoto', db.config.tarifaMoto || 30);
                 setElementValue('correoDestino', db.config.correoDestino || 'admin@conjunto.com');
+                setElementValue('minutosGratisCarro', db.config.minutosGratisCarro || 0);
+                setElementValue('minutosGratisMoto', db.config.minutosGratisMoto || 0);
+                const chkCarro = document.getElementById('activarGratisCarro');
+                const chkMoto = document.getElementById('activarGratisMoto');
+                const inpCarro = document.getElementById('minutosGratisCarro');
+                const inpMoto = document.getElementById('minutosGratisMoto');
+                if (chkCarro) { chkCarro.checked = !!db.config.gratisCarroActivo; if (inpCarro) inpCarro.disabled = !db.config.gratisCarroActivo; }
+                if (chkMoto) { chkMoto.checked = !!db.config.gratisMotoActivo; if (inpMoto) inpMoto.disabled = !db.config.gratisMotoActivo; }
             }
 
             checkAuthentication();
             await pullFromCloud();
 
-            // Verificación periódica de conexión con n8n (heartbeat cada 45 segundos)
-            setInterval(() => {
-                pullFromCloud();
-            }, 45000);
+            // Heartbeat cada 30 segundos para conexión siempre activa
+            setInterval(() => { pullFromCloud(); }, 30000);
+
+            // Sincronización inmediata cuando el usuario vuelve a la app (tab activo)
+            document.addEventListener('visibilitychange', () => {
+                if (!document.hidden) pullFromCloud();
+            });
         };
 
         function saveDb() {
@@ -1094,9 +1154,15 @@
             renderDynamicZones();
             nombreEl.value = '';
             tarifaEl.value = '';
-            showToast('Zona común añadida localmente.');
+            showToast('Guardando zona en Google Sheets…', 'info');
 
-            await pushToCloud('ACTUALIZAR_CONFIG', db.config);
+            const ok = await pushToCloud('ACTUALIZAR_CONFIG', db.config);
+            if (ok) {
+                showToast('Zona añadida y sincronizada con Google Sheets ✓');
+                await pullFromCloud();
+            } else {
+                showToast('Zona guardada localmente. Pendiente de sincronización.', 'info');
+            }
         }
 
         async function eliminarZonaComun(index) {
@@ -1104,9 +1170,15 @@
             saveDb();
             renderZonasAdminList();
             renderDynamicZones();
-            showToast('Zona común eliminada localmente.');
+            showToast('Eliminando zona del Sheet…', 'info');
 
-            await pushToCloud('ACTUALIZAR_CONFIG', db.config);
+            const ok = await pushToCloud('ACTUALIZAR_CONFIG', db.config);
+            if (ok) {
+                showToast('Zona eliminada y sincronizada con Google Sheets ✓');
+                await pullFromCloud();
+            } else {
+                showToast('Zona eliminada localmente. Pendiente de sincronización.', 'info');
+            }
         }
 
         function renderDynamicZones() {
@@ -1314,10 +1386,36 @@
                 clearTimeout(timeoutId);
                 
                 if (response.ok) {
-                    const cloudData = await response.json();
+                    const rawText = await response.text();
+                    // Si el body está vacío, mantener Online pero sin sobrescribir datos
+                    if (!rawText || rawText.trim().length === 0) {
+                        actualizarBadgeSincronizacion(true, "Online");
+                        return;
+                    }
+                    let cloudData;
+                    try { cloudData = JSON.parse(rawText); } catch(e) { actualizarBadgeSincronizacion(true, "Online"); return; }
                     
-                    if (cloudData && typeof cloudData === 'object') {
-                        if (cloudData.usuarios && Array.isArray(cloudData.usuarios)) db.usuarios = cloudData.usuarios;
+                    if (cloudData) {
+                        // Soportar respuesta como array plano de usuarios/propietarios
+                        if (Array.isArray(cloudData)) cloudData = { usuarios: cloudData };
+                        
+                        // Aceptar "propietarios" como alias de "usuarios"
+                        if (cloudData.propietarios && Array.isArray(cloudData.propietarios) && !cloudData.usuarios) {
+                            cloudData.usuarios = cloudData.propietarios;
+                        }
+                        
+                        if (cloudData.usuarios && Array.isArray(cloudData.usuarios) && cloudData.usuarios.length > 0) {
+                            // Merge: mantener admins/celadores locales y agregar propietarios del Sheet
+                            const localAdmins = db.usuarios.filter(u => u && (u.rol === 'Administrador' || u.rol === 'Celador'));
+                            const sheetUsers = cloudData.usuarios;
+                            const merged = [...localAdmins];
+                            sheetUsers.forEach(su => {
+                                if (!su) return;
+                                const exists = merged.some(m => m.username && su.username && m.username.toLowerCase() === su.username.toLowerCase());
+                                if (!exists) merged.push(su);
+                            });
+                            db.usuarios = merged;
+                        }
                         if (cloudData.registros && Array.isArray(cloudData.registros)) db.registros = cloudData.registros;
                         if (cloudData.reservas && Array.isArray(cloudData.reservas)) db.reservas = cloudData.reservas;
                         if (cloudData.mudanzas && Array.isArray(cloudData.mudanzas)) db.mudanzas = cloudData.mudanzas;
@@ -1336,15 +1434,17 @@
                         renderMudanzas();
                         renderPaquetes();
                         renderDynamicZones();
-
-                        actualizarBadgeSincronizacion(true, "Online");
                     }
+                    actualizarBadgeSincronizacion(true, "Online");
                 } else {
-                    actualizarBadgeSincronizacion(false, "Error n8n");
+                    actualizarBadgeSincronizacion(false, "Reconectando...");
+                    setTimeout(() => pullFromCloud(), 15000);
                 }
             } catch (err) {
                 if (timeoutId) clearTimeout(timeoutId);
-                actualizarBadgeSincronizacion(false, "Offline");
+                actualizarBadgeSincronizacion(false, "Reconectando...");
+                // Reintento automático en 15 segundos si falla la conexión
+                setTimeout(() => pullFromCloud(), 15000);
             }
         }
 
@@ -1369,13 +1469,13 @@
                 if (response.ok) {
                     actualizarBadgeSincronizacion(true, "Online");
                 } else {
-                    actualizarBadgeSincronizacion(false, "Error n8n");
+                    actualizarBadgeSincronizacion(false, "Reconectando...");
                 }
 
                 return response.ok;
             } catch (err) {
                 console.warn("Offline - datos guardados en cola local", err);
-                actualizarBadgeSincronizacion(false, "Offline");
+                actualizarBadgeSincronizacion(false, "Reconectando...");
                 return false;
             }
         }
@@ -1398,12 +1498,16 @@
             const el = document.getElementById('syncStatusBadge');
             const txt = document.getElementById('syncStatusText');
             if (!el || !txt) return;
+            const dot = el.querySelector('span.rounded-full');
             if (exito) {
                 el.className = "cursor-pointer text-[10px] sm:text-xs bg-emerald-800 text-emerald-200 px-2.5 py-1 rounded-lg flex items-center gap-1.5 font-semibold hover:bg-emerald-700 transition";
+                if (dot) dot.className = "w-2 h-2 rounded-full bg-emerald-400 animate-pulse";
                 txt.innerText = text || "Online";
             } else {
-                el.className = "cursor-pointer text-[10px] sm:text-xs bg-rose-800 text-rose-200 px-2.5 py-1 rounded-lg flex items-center gap-1.5 font-semibold hover:bg-rose-700 transition";
-                txt.innerText = text || "Offline";
+                // Siempre muestra estado de reconexion, nunca Offline permanente
+                el.className = "cursor-pointer text-[10px] sm:text-xs bg-amber-700 text-amber-100 px-2.5 py-1 rounded-lg flex items-center gap-1.5 font-semibold hover:bg-amber-600 transition";
+                if (dot) dot.className = "w-2 h-2 rounded-full bg-amber-300 animate-pulse";
+                txt.innerText = text || "Reconectando...";
             }
         }
 
@@ -1535,10 +1639,14 @@
             const totalMinutes = Math.floor(durationMs / (1000 * 60));
             const hours = Math.floor(totalMinutes / 60);
             const minutes = totalMinutes % 60;
-            const hoursToCharge = Math.ceil(durationMs / (1000 * 60 * 60)) || 1; 
 
+            // Cálculo por minutos con tiempo de gracia configurable
+            const minutosGratis = reg.tipo === 'Carro'
+                ? (db.config.gratisCarroActivo ? (db.config.minutosGratisCarro || 0) : 0)
+                : (db.config.gratisMotoActivo ? (db.config.minutosGratisMoto || 0) : 0);
+            const minutesToCharge = Math.max(0, totalMinutes - minutosGratis);
             const rate = reg.tipo === 'Carro' ? db.config.tarifaCarro : db.config.tarifaMoto;
-            const cost = hoursToCharge * rate;
+            const cost = minutesToCharge * rate;
 
             const setInnerText = (id, text) => {
                 const el = document.getElementById(id);
@@ -1547,14 +1655,17 @@
 
             setInnerText('checkoutPlaca', reg.placa);
             setInnerText('checkoutIngreso', entryDate.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }) + ' (' + entryDate.toLocaleDateString() + ')');
-            setInnerText('checkoutDuracion', `${hours}h ${minutes}m (Cobro: ${hoursToCharge}h)`);
+            const gratisInfo = minutosGratis > 0
+                ? ` · ${minutosGratis} min gratis · Cobro: ${minutesToCharge} min`
+                : ` · Cobro: ${totalMinutes} min`;
+            setInnerText('checkoutDuracion', `${hours}h ${minutes}m${gratisInfo}`);
             
             const formattedCost = new Intl.NumberFormat('es-CO', { style: 'currency', currency: 'COP', maximumFractionDigits: 0 }).format(cost);
             setInnerText('checkoutCosto', formattedCost);
 
             reg.tmpCosto = cost;
             reg.tmpHoraSalida = exitDate.toISOString();
-            reg.tmpDuracionTxt = `${hours} horas y ${minutes} minutos`;
+            reg.tmpDuracionTxt = `${hours} horas y ${minutes} minutos (${minutesToCharge} min cobrados, ${minutosGratis} min gratis)`;
 
             const modal = document.getElementById('salidaModal');
             if (modal) modal.classList.remove('hidden');
@@ -2029,14 +2140,34 @@
 
         // --- SISTEMA DE CONFIGURACIÓN DINÁMICA ---
         async function guardarConfiguracion() {
-            db.config.tarifaCarro = parseInt(document.getElementById('tarifaCarro').value) || 3000;
-            db.config.tarifaMoto = parseInt(document.getElementById('tarifaMoto').value) || 1500;
+            db.config.tarifaCarro = parseInt(document.getElementById('tarifaCarro').value) || 50;
+            db.config.tarifaMoto = parseInt(document.getElementById('tarifaMoto').value) || 30;
             db.config.correoDestino = document.getElementById('correoDestino').value.trim();
 
-            saveDb();
-            showToast('Configuración del conjunto guardada.');
+            // Guardar configuración de minutos gratis
+            const chkCarro = document.getElementById('activarGratisCarro');
+            const chkMoto = document.getElementById('activarGratisMoto');
+            db.config.gratisCarroActivo = chkCarro ? chkCarro.checked : false;
+            db.config.gratisMotoActivo = chkMoto ? chkMoto.checked : false;
+            db.config.minutosGratisCarro = db.config.gratisCarroActivo
+                ? (parseInt(document.getElementById('minutosGratisCarro').value) || 0) : 0;
+            db.config.minutosGratisMoto = db.config.gratisMotoActivo
+                ? (parseInt(document.getElementById('minutosGratisMoto').value) || 0) : 0;
 
-            await pushToCloud('ACTUALIZAR_CONFIG', db.config);
+            saveDb();
+            showToast('Configuración guardada localmente.');
+
+            const ok = await pushToCloud('ACTUALIZAR_CONFIG', db.config);
+            if (ok) showToast('Configuración sincronizada con Google Sheets ✓');
+        }
+
+        function toggleGratis(tipo) {
+            const chk = document.getElementById(tipo === 'carro' ? 'activarGratisCarro' : 'activarGratisMoto');
+            const inp = document.getElementById(tipo === 'carro' ? 'minutosGratisCarro' : 'minutosGratisMoto');
+            if (chk && inp) {
+                inp.disabled = !chk.checked;
+                if (!chk.checked) inp.value = 0;
+            }
         }
 
         function guardarWebhooks() {
