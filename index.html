@@ -1424,10 +1424,25 @@
                             });
                             db.usuarios = merged;
                         }
-                        if (cloudData.registros && Array.isArray(cloudData.registros)) db.registros = cloudData.registros;
-                        if (cloudData.reservas && Array.isArray(cloudData.reservas)) db.reservas = cloudData.reservas;
-                        if (cloudData.mudanzas && Array.isArray(cloudData.mudanzas)) db.mudanzas = cloudData.mudanzas;
-                        if (cloudData.paquetes && Array.isArray(cloudData.paquetes)) db.paquetes = cloudData.paquetes;
+                        function dedupeById(arr) {
+                            if (!Array.isArray(arr)) return [];
+                            const map = new Map();
+                            arr.forEach(item => {
+                                if (!item) return;
+                                const key = item.id || item.ID || item.username || (item.placa ? (item.placa + '_' + (item.horaIngreso || '')) : null);
+                                if (key) {
+                                    map.set(String(key).toLowerCase(), item);
+                                } else {
+                                    map.set(JSON.stringify(item), item);
+                                }
+                            });
+                            return Array.from(map.values());
+                        }
+
+                        if (cloudData.registros && Array.isArray(cloudData.registros)) db.registros = dedupeById(cloudData.registros);
+                        if (cloudData.reservas && Array.isArray(cloudData.reservas)) db.reservas = dedupeById(cloudData.reservas);
+                        if (cloudData.mudanzas && Array.isArray(cloudData.mudanzas)) db.mudanzas = dedupeById(cloudData.mudanzas);
+                        if (cloudData.paquetes && Array.isArray(cloudData.paquetes)) db.paquetes = dedupeById(cloudData.paquetes);
                         if (cloudData.config && typeof cloudData.config === 'object') {
                             db.config = Object.assign({}, db.config, cloudData.config);
                         }
