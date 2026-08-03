@@ -1,0 +1,220 @@
+﻿{
+    "Leer Config":  {
+                        "main":  [
+                                     [
+                                         {
+                                             "node":  "Leer Usuarios",
+                                             "type":  "main",
+                                             "index":  0
+                                         }
+                                     ]
+                                 ]
+                    },
+    "Leer Usuarios":  {
+                          "main":  [
+                                       [
+                                           {
+                                               "node":  "Leer Registros",
+                                               "type":  "main",
+                                               "index":  0
+                                           }
+                                       ]
+                                   ]
+                      },
+    "Leer Registros":  {
+                           "main":  [
+                                        [
+                                            {
+                                                "node":  "Leer config 2",
+                                                "type":  "main",
+                                                "index":  0
+                                            }
+                                        ]
+                                    ]
+                       },
+    "Switch":  {
+                   "main":  [
+                                [
+                                    {
+                                        "node":  "REGISTRAR_INGRESO",
+                                        "type":  "main",
+                                        "index":  0
+                                    }
+                                ],
+                                [
+                                    {
+                                        "node":  "REGISTRAR_SALIDA",
+                                        "type":  "main",
+                                        "index":  0
+                                    }
+                                ],
+                                [
+                                    {
+                                        "node":  "CREAR_USUARIO",
+                                        "type":  "main",
+                                        "index":  0
+                                    }
+                                ],
+                                [
+                                    {
+                                        "node":  "ELIMINAR_USUARIO",
+                                        "type":  "main",
+                                        "index":  0
+                                    }
+                                ],
+                                [
+                                    {
+                                        "node":  "ACTUALIZAR_CONFIG",
+                                        "type":  "main",
+                                        "index":  0
+                                    },
+                                    {
+                                        "node":  "ACTUALIZAR_CONFIG1",
+                                        "type":  "main",
+                                        "index":  0
+                                    }
+                                ],
+                                [
+                                    {
+                                        "node":  "REGISTRAR_RESERVA",
+                                        "type":  "main",
+                                        "index":  0
+                                    }
+                                ],
+                                [
+                                    {
+                                        "node":  "REGISTRAR_MUDANZA",
+                                        "type":  "main",
+                                        "index":  0
+                                    }
+                                ],
+                                [
+                                    {
+                                        "node":  "REGISTRAR_PAQUETE",
+                                        "type":  "main",
+                                        "index":  0
+                                    }
+                                ],
+                                [
+                                    {
+                                        "node":  "ENTREGAR_PAQUETE",
+                                        "type":  "main",
+                                        "index":  0
+                                    }
+                                ],
+                                [
+                                    {
+                                        "node":  "INGRESO_TURNO",
+                                        "type":  "main",
+                                        "index":  0
+                                    }
+                                ],
+                                [
+                                    {
+                                        "node":  "SALIDA_TURNO",
+                                        "type":  "main",
+                                        "index":  0
+                                    }
+                                ]
+                            ]
+               },
+    "REGISTRAR_SALIDA":  {
+                             "main":  [
+                                          [
+                                              {
+                                                  "node":  "Send a message1",
+                                                  "type":  "main",
+                                                  "index":  0
+                                              }
+                                          ]
+                                      ]
+                         },
+    "Code in JavaScript1":  {
+                                "main":  [
+                                             [
+                                                 {
+                                                     "node":  "Respond to Webhook",
+                                                     "type":  "main",
+                                                     "index":  0
+                                                 }
+                                             ]
+                                         ]
+                            },
+    "Leer config 2":  {
+                          "main":  [
+                                       [
+                                           {
+                                               "node":  "Leer reservas",
+                                               "type":  "main",
+                                               "index":  0
+                                           }
+                                       ]
+                                   ]
+                      },
+    "Leer reservas":  {
+                          "main":  [
+                                       [
+                                           {
+                                               "node":  "Leer mudanzas",
+                                               "type":  "main",
+                                               "index":  0
+                                           }
+                                       ]
+                                   ]
+                      },
+    "Leer mudanzas":  {
+                          "main":  [
+                                       [
+                                           {
+                                               "node":  "Leer paquetes",
+                                               "type":  "main",
+                                               "index":  0
+                                           }
+                                       ]
+                                   ]
+                      },
+    "Leer paquetes":  {
+                          "main":  [
+                                       [
+                                           {
+                                               "node":  "Leer turnos",
+                                               "type":  "main",
+                                               "index":  0
+                                           }
+                                       ]
+                                   ]
+                      },
+    "Leer turnos":  {
+                        "main":  [
+                                     [
+                                         {
+                                             "node":  "Code in JavaScript1",
+                                             "type":  "main",
+                                             "index":  0
+                                         }
+                                     ]
+                                 ]
+                    },
+    "Webhook":  {
+                    "main":  [
+                                 [
+                                     {
+                                         "node":  "Leer Config",
+                                         "type":  "main",
+                                         "index":  0
+                                     }
+                                 ]
+                             ]
+                },
+    "Webhook1":  {
+                     "main":  [
+                                  [
+                                      {
+                                          "node":  "Switch",
+                                          "type":  "main",
+                                          "index":  0
+                                      }
+                                  ]
+                              ]
+                 }
+}

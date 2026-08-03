@@ -1012,9 +1012,6 @@
             checkAuthentication();
             await pullFromCloud();
 
-            // Heartbeat cada 30 segundos para conexión siempre activa
-            setInterval(() => { pullFromCloud(); }, 30000);
-
             // Sincronización inmediata cuando el usuario vuelve a la app (tab activo)
             document.addEventListener('visibilitychange', () => {
                 if (!document.hidden) pullFromCloud();
@@ -1378,8 +1375,19 @@
                 const controller = new AbortController();
                 timeoutId = setTimeout(() => controller.abort(), 6500); 
 
-                const response = await fetch(webhookPull, {
-                    method: 'GET',
+                const payload = {
+                    accion: "leer_datos",
+                    data: {},
+                    meta: {
+                        fecha: new Date().toISOString(),
+                        usuarioOperador: activeUser ? (activeUser.username || activeUser.email) : 'anonimo'
+                    }
+                };
+
+                const response = await fetch(webhookPush, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload),
                     signal: controller.signal
                 });
                 
@@ -1437,21 +1445,18 @@
                     }
                     actualizarBadgeSincronizacion(true, "Online");
                 } else {
-                    actualizarBadgeSincronizacion(false, "Reconectando...");
-                    setTimeout(() => pullFromCloud(), 15000);
+                    actualizarBadgeSincronizacion(false, "Error de red");
                 }
             } catch (err) {
                 if (timeoutId) clearTimeout(timeoutId);
-                actualizarBadgeSincronizacion(false, "Reconectando...");
-                // Reintento automático en 15 segundos si falla la conexión
-                setTimeout(() => pullFromCloud(), 15000);
+                actualizarBadgeSincronizacion(false, "Offline");
             }
         }
 
         async function pushToCloud(actionType, actionData) {
             try {
                 const payload = {
-                    action: actionType,
+                    accion: actionType,
                     data: actionData,
                     meta: {
                         fecha: new Date().toISOString(),
