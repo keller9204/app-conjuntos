@@ -1373,7 +1373,7 @@
             let timeoutId;
             try {
                 const controller = new AbortController();
-                timeoutId = setTimeout(() => controller.abort(), 6500); 
+                timeoutId = setTimeout(() => controller.abort(), 30000); 
 
                 const payload = {
                     accion: "leer_datos",
