@@ -1,0 +1,5566 @@
+{
+  "updatedAt": "2026-08-03T18:44:23.416Z",
+  "createdAt": "2026-07-07T21:11:58.777Z",
+  "id": "aMFoQ0fCGvKQaSV0",
+  "name": "conjunto",
+  "description": null,
+  "active": true,
+  "isArchived": false,
+  "nodes": [
+    {
+      "parameters": {
+        "rules": {
+          "values": [
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "leftValue": "={{ $json.body.accion }}",
+                    "rightValue": "REGISTRAR_INGRESO",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    },
+                    "id": "2bcaa14c-450d-4d96-91a6-97fdee0741e0"
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "REGISTRAR_INGRESO"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "dde0af71-13dd-43f9-9bfb-cef58ae17952",
+                    "leftValue": "={{ $json.body.accion }}",
+                    "rightValue": "REGISTRAR_SALIDA",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "REGISTRAR_SALIDA"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "256ff7ec-5007-42e0-aeea-1b76e745ee66",
+                    "leftValue": "={{ $json.body.accion }}",
+                    "rightValue": "CREAR_USUARIO",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "CREAR_USUARIO"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "ef0a7bef-bcd4-454f-a408-a5dde4fdeea5",
+                    "leftValue": "={{ $json.body.accion }}",
+                    "rightValue": "ELIMINAR_USUARIO",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "ELIMINAR_USUARIO"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "59c17292-b6d5-456c-a15b-fc44ac4d4d81",
+                    "leftValue": "={{ $json.body.accion }}",
+                    "rightValue": "ACTUALIZAR_CONFIG",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "ACTUALIZAR_CONFIG"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "fd1559d6-8f57-47f6-984f-01beafe26538",
+                    "leftValue": "={{ $json.body.accion }}",
+                    "rightValue": "REGISTRAR_RESERVA",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "REGISTRAR_RESERVA"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "11c25b8b-82c0-4967-b082-fc90e10de04e",
+                    "leftValue": "={{ $json.body.accion }}",
+                    "rightValue": "REGISTRAR_MUDANZA",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "REGISTRAR_MUDANZA"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "2b87e81e-63e7-4e31-abe3-f5b163d5b99d",
+                    "leftValue": "={{ $json.body.accion }}",
+                    "rightValue": "REGISTRAR_PAQUETE",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "REGISTRAR_PAQUETE"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "2438dbb2-1c15-4d80-8829-99e0949cd25e",
+                    "leftValue": "={{ $json.body.accion }}",
+                    "rightValue": "ENTREGAR_PAQUETE",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "ENTREGAR_PAQUETE"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "6daae6d0-f60c-42f3-a57e-cf55ebe406a4",
+                    "leftValue": "={{ $json.body.accion }}",
+                    "rightValue": "INGRESO_TURNO",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "INGRESO_TURNO"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "581ba234-377a-4442-b900-e546311cccf8",
+                    "leftValue": "={{ $json.body.accion }}",
+                    "rightValue": "SALIDA_TURNO",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "SALIDA_TURNO"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "new-rule-leer-datos",
+                    "leftValue": "={{ $json.body.accion }}",
+                    "rightValue": "leer_datos",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "leer_datos"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.switch",
+      "typeVersion": 3.4,
+      "position": [
+        -48,
+        496
+      ],
+      "id": "1abe17b8-97d0-4a03-9bc3-52678524a3a7",
+      "name": "Switch"
+    },
+    {
+      "parameters": {
+        "documentId": {
+          "__rl": true,
+          "value": "1irMIbb6wPQiGu1M286Do9fKuAyXU-Vb4HQHph2IlYrE",
+          "mode": "list",
+          "cachedResultName": "parqueadero conjunto",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1irMIbb6wPQiGu1M286Do9fKuAyXU-Vb4HQHph2IlYrE/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 761048947,
+          "mode": "list",
+          "cachedResultName": "config",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1irMIbb6wPQiGu1M286Do9fKuAyXU-Vb4HQHph2IlYrE/edit#gid=761048947"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        -48,
+        -64
+      ],
+      "id": "a9ac50f6-bbce-46aa-90f5-832354b4b3f8",
+      "name": "Leer Config",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "Wh3cLB8zKmzwu2yG",
+          "name": "Google Sheets account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "documentId": {
+          "__rl": true,
+          "value": "1irMIbb6wPQiGu1M286Do9fKuAyXU-Vb4HQHph2IlYrE",
+          "mode": "list",
+          "cachedResultName": "parqueadero conjunto",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1irMIbb6wPQiGu1M286Do9fKuAyXU-Vb4HQHph2IlYrE/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 306559923,
+          "mode": "list",
+          "cachedResultName": "Usuarios",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1irMIbb6wPQiGu1M286Do9fKuAyXU-Vb4HQHph2IlYrE/edit#gid=306559923"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        176,
+        -64
+      ],
+      "id": "6584e6cc-474a-4b71-88e6-a4eeed707228",
+      "name": "Leer Usuarios",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "Wh3cLB8zKmzwu2yG",
+          "name": "Google Sheets account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "documentId": {
+          "__rl": true,
+          "value": "1irMIbb6wPQiGu1M286Do9fKuAyXU-Vb4HQHph2IlYrE",
+          "mode": "list",
+          "cachedResultName": "parqueadero conjunto",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1irMIbb6wPQiGu1M286Do9fKuAyXU-Vb4HQHph2IlYrE/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 1965294910,
+          "mode": "list",
+          "cachedResultName": "Registros",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1irMIbb6wPQiGu1M286Do9fKuAyXU-Vb4HQHph2IlYrE/edit#gid=1965294910"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        400,
+        -64
+      ],
+      "id": "487c1f41-0961-4a69-8e65-2aace9e2c286",
+      "name": "Leer Registros",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "Wh3cLB8zKmzwu2yG",
+          "name": "Google Sheets account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "options": {
+          "responseHeaders": {
+            "entries": [
+              {
+                "name": "Access-Control-Allow-Origin",
+                "value": "*"
+              },
+              {
+                "name": "Access-Control-Allow-Methods",
+                "value": "GET, POST, OPTIONS"
+              },
+              {
+                "name": "Access-Control-Allow-Headers",
+                "value": "Content-Type, Accept"
+              }
+            ]
+          }
+        }
+      },
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.5,
+      "position": [
+        1808,
+        -64
+      ],
+      "id": "d2b98ab9-e748-44f3-8656-80b709ef481e",
+      "name": "Respond to Webhook"
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "documentId": {
+          "__rl": true,
+          "value": "1irMIbb6wPQiGu1M286Do9fKuAyXU-Vb4HQHph2IlYrE",
+          "mode": "list",
+          "cachedResultName": "parqueadero conjunto",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1irMIbb6wPQiGu1M286Do9fKuAyXU-Vb4HQHph2IlYrE/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 1965294910,
+          "mode": "list",
+          "cachedResultName": "Registros",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1irMIbb6wPQiGu1M286Do9fKuAyXU-Vb4HQHph2IlYrE/edit#gid=1965294910"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "id": "={{ $json.body.data.id }}",
+            "tipo": "={{ $json.body.data.tipo }}",
+            "placa": "={{ $json.body.data.placa }}",
+            "estado": "Fuera",
+            "bloque": "={{ $json.body.data.bloque }}",
+            "apartamento": "={{ $json.body.data.apartamento }}",
+            "autoriza": "={{ $json.body.data.autoriza }}",
+            "telefono": "={{ $json.body.data.telefono }}",
+            "horaIngreso": "={{ $json.body.data.horaIngreso }}",
+            "firmaIngreso": "={{ $json.body.data.firmaIngreso }}",
+            "horaSalida": "={{ $json.body.data.horaSalida }}",
+            "firmaSalida": "={{ $json.body.data.firmaSalida }}",
+            "costo": "={{ $json.body.data.costo }}",
+            "row_number": 0
+          },
+          "matchingColumns": [
+            "placa"
+          ],
+          "schema": [
+            {
+              "id": "id",
+              "displayName": "id",
+              "required": false,
+              "defaultMatch": true,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "tipo",
+              "displayName": "tipo",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "placa",
+              "displayName": "placa",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "bloque",
+              "displayName": "bloque",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "apartamento",
+              "displayName": "apartamento",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "autoriza",
+              "displayName": "autoriza",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "telefono",
+              "displayName": "telefono",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "horaIngreso",
+              "displayName": "horaIngreso",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "firmaIngreso",
+              "displayName": "firmaIngreso",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "horaSalida",
+              "displayName": "horaSalida",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "firmaSalida",
+              "displayName": "firmaSalida",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "estado",
+              "displayName": "estado",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "costo",
+              "displayName": "costo",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "row_number",
+              "displayName": "row_number",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "number",
+              "canBeUsedToMatch": true,
+              "readOnly": true,
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        400,
+        336
+      ],
+      "id": "da28fe93-7f2c-44ae-9a38-cb4e57ee2c61",
+      "name": "REGISTRAR_SALIDA",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "Wh3cLB8zKmzwu2yG",
+          "name": "Google Sheets account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "appendOrUpdate",
+        "documentId": {
+          "__rl": true,
+          "value": "1irMIbb6wPQiGu1M286Do9fKuAyXU-Vb4HQHph2IlYrE",
+          "mode": "list",
+          "cachedResultName": "parqueadero conjunto",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1irMIbb6wPQiGu1M286Do9fKuAyXU-Vb4HQHph2IlYrE/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 1965294910,
+          "mode": "list",
+          "cachedResultName": "Registros",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1irMIbb6wPQiGu1M286Do9fKuAyXU-Vb4HQHph2IlYrE/edit#gid=1965294910"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "id": "={{ $json.body.data.id }}",
+            "tipo": "={{ $json.body.data.tipo }}",
+            "placa": "={{ $json.body.data.placa }}",
+            "estado": "Dentro",
+            "bloque": "={{ $json.body.data.bloque }}",
+            "apartamento": "={{ $json.body.data.apartamento }}",
+            "autoriza": "={{ $json.body.data.autoriza }}",
+            "telefono": "={{ $json.body.data.telefono }}",
+            "horaIngreso": "={{ $json.body.data.horaIngreso }}",
+            "firmaIngreso": "={{ $json.body.data.firmaIngreso }}",
+            "horaSalida": "={{ $json.body.data.horaSalida }}",
+            "firmaSalida": "={{ $json.body.data.firmaSalida }}",
+            "costo": "={{ $json.body.data.costo }}"
+          },
+          "matchingColumns": [
+            "id"
+          ],
+          "schema": [
+            {
+              "id": "id",
+              "displayName": "id",
+              "required": false,
+              "defaultMatch": true,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "tipo",
+              "displayName": "tipo",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "placa",
+              "displayName": "placa",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "bloque",
+              "displayName": "bloque",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "apartamento",
+              "displayName": "apartamento",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "autoriza",
+              "displayName": "autoriza",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "telefono",
+              "displayName": "telefono",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "horaIngreso",
+              "displayName": "horaIngreso",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "firmaIngreso",
+              "displayName": "firmaIngreso",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "horaSalida",
+              "displayName": "horaSalida",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "firmaSalida",
+              "displayName": "firmaSalida",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "estado",
+              "displayName": "estado",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "costo",
+              "displayName": "costo",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        256,
+        224
+      ],
+      "id": "2bb200f6-b16d-4b90-8d79-ecf2ee6a4851",
+      "name": "REGISTRAR_INGRESO",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "Wh3cLB8zKmzwu2yG",
+          "name": "Google Sheets account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "documentId": {
+          "__rl": true,
+          "value": "1irMIbb6wPQiGu1M286Do9fKuAyXU-Vb4HQHph2IlYrE",
+          "mode": "list",
+          "cachedResultName": "parqueadero conjunto",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1irMIbb6wPQiGu1M286Do9fKuAyXU-Vb4HQHph2IlYrE/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "Configuracion",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1irMIbb6wPQiGu1M286Do9fKuAyXU-Vb4HQHph2IlYrE/edit#gid=0"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "tarifaCarro": "={{ $json.body.data.tarifaCarro }}",
+            "tarifaMoto": "={{ $json.body.data.tarifaMoto }}",
+            "correoDestino": "={{ $json.body.data.correoDestino }}",
+            "ID": "=1",
+            "row_number": 0
+          },
+          "matchingColumns": [
+            "ID"
+          ],
+          "schema": [
+            {
+              "id": "ID",
+              "displayName": "ID",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "tarifaCarro",
+              "displayName": "tarifaCarro",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "tarifaMoto",
+              "displayName": "tarifaMoto",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "correoDestino",
+              "displayName": "correoDestino",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "row_number",
+              "displayName": "row_number",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "number",
+              "canBeUsedToMatch": true,
+              "readOnly": true,
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        816,
+        656
+      ],
+      "id": "464ef79e-d269-410c-b628-fe9e9a9050e2",
+      "name": "ACTUALIZAR_CONFIG",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "Wh3cLB8zKmzwu2yG",
+          "name": "Google Sheets account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "function safeRead(n){try{const r=$items(n);if(!Array.isArray(r)||r.length===0)return[];return r.map(i=>(i&&typeof i.json!=='undefined')?i.json:null).filter(Boolean);}catch(e){return[];}}function safeOne(n){const r=safeRead(n);return r.length>0?r[0]:{};}function parseZonas(raw){try{if(typeof raw==='string'&&raw.trim().startsWith('['))return JSON.parse(raw);if(Array.isArray(raw))return raw;}catch(e){}return[{nombre:'Salon Social',tarifa:150000},{nombre:'Zona BBQ',tarifa:50000},{nombre:'Cancha Multiple',tarifa:20000}];}const configRaw=safeOne('Leer Config');const usuarios=safeRead('Leer Usuarios');const registros=safeRead('Leer Registros');const reservas=safeRead('Leer reservas');const mudanzas=safeRead('Leer mudanzas');const paquetes=safeRead('Leer paquetes');const cfg={tarifaCarro:Number(configRaw.tarifaCarro)||50,tarifaMoto:Number(configRaw.tarifaMoto)||30,minutosGratisCarro:Number(configRaw.minutosGratisCarro)||0,minutosGratisMoto:Number(configRaw.minutosGratisMoto)||0,gratisCarroActivo:(configRaw.gratisCarroActivo==='true'||configRaw.gratisCarroActivo===true),gratisMotoActivo:(configRaw.gratisMotoActivo==='true'||configRaw.gratisMotoActivo===true),correoDestino:configRaw.correoDestino||'admin@conjunto.com',zonas:parseZonas(configRaw.zonas)};return[{json:{usuarios,registros,reservas,mudanzas,paquetes,config:cfg}}];"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1584,
+        -64
+      ],
+      "id": "fa2cc627-74aa-4c93-bf69-d3f72dcb02e4",
+      "name": "Code in JavaScript1"
+    },
+    {
+      "parameters": {
+        "sendTo": "=kellertriana19@gmail.com",
+        "subject": "=Notificaci?n de Salida - Veh?culo {{ $json.placa }}",
+        "message": "=Dise?a tu plantilla usando las variables que necesitas pintar: {{ $json.costo }}, {{ $json.horaIngreso }}, {{ $json.horaSalida }}, e inserta las firmas usando etiquetas <img src=\"{{ $json.firmaSalida }}\">.",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.2,
+      "position": [
+        1040,
+        352
+      ],
+      "id": "9519f52c-4a90-42ba-b74b-07ca5d8e52c3",
+      "name": "Send a message1",
+      "webhookId": "00994ad7-afa3-4d9c-b286-483932bf328a",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "tYBrlwFYYF6lJUDc",
+          "name": "Gmail account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "documentId": {
+          "__rl": true,
+          "value": "1irMIbb6wPQiGu1M286Do9fKuAyXU-Vb4HQHph2IlYrE",
+          "mode": "list",
+          "cachedResultName": "parqueadero conjunto",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1irMIbb6wPQiGu1M286Do9fKuAyXU-Vb4HQHph2IlYrE/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 761048947,
+          "mode": "list",
+          "cachedResultName": "config",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1irMIbb6wPQiGu1M286Do9fKuAyXU-Vb4HQHph2IlYrE/edit#gid=761048947"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        576,
+        -64
+      ],
+      "id": "a5102ebb-5804-4e2e-a640-893fe0aac4ab",
+      "name": "Leer config 2",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "Wh3cLB8zKmzwu2yG",
+          "name": "Google Sheets account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "documentId": {
+          "__rl": true,
+          "value": "1irMIbb6wPQiGu1M286Do9fKuAyXU-Vb4HQHph2IlYrE",
+          "mode": "list",
+          "cachedResultName": "parqueadero conjunto",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1irMIbb6wPQiGu1M286Do9fKuAyXU-Vb4HQHph2IlYrE/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 254347884,
+          "mode": "list",
+          "cachedResultName": "reservas",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1irMIbb6wPQiGu1M286Do9fKuAyXU-Vb4HQHph2IlYrE/edit#gid=254347884"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        784,
+        -64
+      ],
+      "id": "6c7c560b-0758-41b9-af13-a6c0ed19eb7a",
+      "name": "Leer reservas",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "Wh3cLB8zKmzwu2yG",
+          "name": "Google Sheets account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "documentId": {
+          "__rl": true,
+          "value": "1irMIbb6wPQiGu1M286Do9fKuAyXU-Vb4HQHph2IlYrE",
+          "mode": "list",
+          "cachedResultName": "parqueadero conjunto",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1irMIbb6wPQiGu1M286Do9fKuAyXU-Vb4HQHph2IlYrE/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 1761903702,
+          "mode": "list",
+          "cachedResultName": "mudanzas",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1irMIbb6wPQiGu1M286Do9fKuAyXU-Vb4HQHph2IlYrE/edit#gid=1761903702"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        976,
+        -64
+      ],
+      "id": "a7910656-a798-4b52-8b13-ef26ea0a67ba",
+      "name": "Leer mudanzas",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "Wh3cLB8zKmzwu2yG",
+          "name": "Google Sheets account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "documentId": {
+          "__rl": true,
+          "value": "1irMIbb6wPQiGu1M286Do9fKuAyXU-Vb4HQHph2IlYrE",
+          "mode": "list",
+          "cachedResultName": "parqueadero conjunto",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1irMIbb6wPQiGu1M286Do9fKuAyXU-Vb4HQHph2IlYrE/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 758656351,
+          "mode": "list",
+          "cachedResultName": "paquetes",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1irMIbb6wPQiGu1M286Do9fKuAyXU-Vb4HQHph2IlYrE/edit#gid=758656351"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        1168,
+        -64
+      ],
+      "id": "6ae5563f-d793-479a-ac37-5541e5e6dcf5",
+      "name": "Leer paquetes",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "Wh3cLB8zKmzwu2yG",
+          "name": "Google Sheets account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "documentId": {
+          "__rl": true,
+          "value": "1irMIbb6wPQiGu1M286Do9fKuAyXU-Vb4HQHph2IlYrE",
+          "mode": "list",
+          "cachedResultName": "parqueadero conjunto",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1irMIbb6wPQiGu1M286Do9fKuAyXU-Vb4HQHph2IlYrE/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 1821917736,
+          "mode": "list",
+          "cachedResultName": "turnos",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1irMIbb6wPQiGu1M286Do9fKuAyXU-Vb4HQHph2IlYrE/edit#gid=1821917736"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        1360,
+        -64
+      ],
+      "id": "389f1416-adba-4e2f-a2a2-1ce2549813f2",
+      "name": "Leer turnos",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "Wh3cLB8zKmzwu2yG",
+          "name": "Google Sheets account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "append",
+        "documentId": {
+          "__rl": true,
+          "value": "1irMIbb6wPQiGu1M286Do9fKuAyXU-Vb4HQHph2IlYrE",
+          "mode": "list",
+          "cachedResultName": "parqueadero conjunto",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1irMIbb6wPQiGu1M286Do9fKuAyXU-Vb4HQHph2IlYrE/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 306559923,
+          "mode": "list",
+          "cachedResultName": "Usuarios",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1irMIbb6wPQiGu1M286Do9fKuAyXU-Vb4HQHph2IlYrE/edit#gid=306559923"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "email": "={{ $json.body.data.usuarioCreado.email }}",
+            "pass": "={{ $json.body.data.usuarioCreado.pass }}",
+            "rol": "={{ $json.body.data.usuarioCreado.rol }}",
+            "name": "={{ $json.body.data.usuarioCreado.name }}",
+            "username": "={{ $json.body.data.usuarioCreado.username }}",
+            "phone": "={{ $json.body.data.usuarioCreado.phone }}",
+            "bloque": "={{ $json.body.data.usuarioCreado.bloque }}",
+            "apto": "={{ $json.body.data.usuarioCreado.apto }}"
+          },
+          "matchingColumns": [
+            "email"
+          ],
+          "schema": [
+            {
+              "id": "email",
+              "displayName": "email",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "pass",
+              "displayName": "pass",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "rol",
+              "displayName": "rol",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "name",
+              "displayName": "name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "username",
+              "displayName": "username",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "phone",
+              "displayName": "phone",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "bloque",
+              "displayName": "bloque",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "apto",
+              "displayName": "apto",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        544,
+        448
+      ],
+      "id": "9ea79ad0-3d2d-4d27-b85f-34b3f18b0dd9",
+      "name": "CREAR_USUARIO",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "Wh3cLB8zKmzwu2yG",
+          "name": "Google Sheets account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "append",
+        "documentId": {
+          "__rl": true,
+          "value": "1irMIbb6wPQiGu1M286Do9fKuAyXU-Vb4HQHph2IlYrE",
+          "mode": "list",
+          "cachedResultName": "parqueadero conjunto",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1irMIbb6wPQiGu1M286Do9fKuAyXU-Vb4HQHph2IlYrE/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 254347884,
+          "mode": "list",
+          "cachedResultName": "reservas",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1irMIbb6wPQiGu1M286Do9fKuAyXU-Vb4HQHph2IlYrE/edit#gid=254347884"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "id": "={{ $json.body.data.id }}",
+            "zona": "={{ $json.body.data.zona }}",
+            "bloque": "={{ $json.body.data.bloque }}",
+            "apto": "={{ $json.body.data.apto }}",
+            "nombre": "={{ $json.body.data.nombre }}",
+            "fecha": "={{ $json.body.data.fecha }}",
+            "hora": "={{ $json.body.data.hora }}",
+            "metodo": "={{ $json.body.data.metodo }}",
+            "comprobante": "={{ $json.body.data.comprobante }}",
+            "estado": "={{ $json.body.data.estado }}",
+            "timestap": "={{ $json.body.data.timestap }}"
+          },
+          "matchingColumns": [
+            "ID"
+          ],
+          "schema": [
+            {
+              "id": "id",
+              "displayName": "id",
+              "required": false,
+              "defaultMatch": true,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "zona",
+              "displayName": "zona",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "bloque",
+              "displayName": "bloque",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "apto",
+              "displayName": "apto",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "nombre",
+              "displayName": "nombre",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "fecha",
+              "displayName": "fecha",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "hora",
+              "displayName": "hora",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "metodo",
+              "displayName": "metodo",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "comprobante",
+              "displayName": "comprobante",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "estado",
+              "displayName": "estado",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "timestap",
+              "displayName": "timestap",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        672,
+        768
+      ],
+      "id": "4dae321c-266e-45c5-8a1e-634c33a8ae95",
+      "name": "REGISTRAR_RESERVA",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "Wh3cLB8zKmzwu2yG",
+          "name": "Google Sheets account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "append",
+        "documentId": {
+          "__rl": true,
+          "value": "1irMIbb6wPQiGu1M286Do9fKuAyXU-Vb4HQHph2IlYrE",
+          "mode": "list",
+          "cachedResultName": "parqueadero conjunto",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1irMIbb6wPQiGu1M286Do9fKuAyXU-Vb4HQHph2IlYrE/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 1761903702,
+          "mode": "list",
+          "cachedResultName": "mudanzas",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1irMIbb6wPQiGu1M286Do9fKuAyXU-Vb4HQHph2IlYrE/edit#gid=1761903702"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "id": "={{ $json.body.data.id }}",
+            "bloque": "={{ $json.body.data.bloque }}",
+            "apto": "={{ $json.body.data.apto }}",
+            "fecha": "={{ $json.body.data.fecha }}",
+            "hora": "={{ $json.body.data.hora }}",
+            "estado": "={{ $json.body.data.estado }}",
+            "timestap": "={{ $json.body.data.timestap }}",
+            "empresa": "={{ $json.body.data.hora }}",
+            "tipo": "={{ $json.body.data.tipo }}",
+            "pazYSalvo": "={{ $json.body.data.pazYSalvo }}",
+            "placa": "={{ $json.body.data.empresa }}",
+            "operarios": "={{ $json.body.data.operarios }}"
+          },
+          "matchingColumns": [
+            "ID"
+          ],
+          "schema": [
+            {
+              "id": "id",
+              "displayName": "id",
+              "required": false,
+              "defaultMatch": true,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "bloque",
+              "displayName": "bloque",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "apto",
+              "displayName": "apto",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "fecha",
+              "displayName": "fecha",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "hora",
+              "displayName": "hora",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "empresa",
+              "displayName": "empresa",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "placa",
+              "displayName": "placa",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "tipo",
+              "displayName": "tipo",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "operarios",
+              "displayName": "operarios",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "pazYSalvo",
+              "displayName": "pazYSalvo",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "estado",
+              "displayName": "estado",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "timestap",
+              "displayName": "timestap",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        528,
+        864
+      ],
+      "id": "f0b41cc7-b6f2-48af-bb75-44769749bc29",
+      "name": "REGISTRAR_MUDANZA",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "Wh3cLB8zKmzwu2yG",
+          "name": "Google Sheets account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "append",
+        "documentId": {
+          "__rl": true,
+          "value": "1irMIbb6wPQiGu1M286Do9fKuAyXU-Vb4HQHph2IlYrE",
+          "mode": "list",
+          "cachedResultName": "parqueadero conjunto",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1irMIbb6wPQiGu1M286Do9fKuAyXU-Vb4HQHph2IlYrE/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 758656351,
+          "mode": "list",
+          "cachedResultName": "paquetes",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1irMIbb6wPQiGu1M286Do9fKuAyXU-Vb4HQHph2IlYrE/edit#gid=758656351"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "row_number": 0,
+            "id": "={{ $json.body.data.id }}",
+            "bloque": "={{ $json.body.data.bloque }}",
+            "apto": "={{ $json.body.data.apto }}",
+            "estado": "=Registrado",
+            "destinatario": "={{ $json.body.data.destinatario }}",
+            "courier": "={{ $json.body.data.courier }}",
+            "fechaRecibido": "={{ $json.body.data.fechaRecibido }}",
+            "firmaRetiro": "={{ $json.body.data.firmaRetiro }}",
+            "foto": "={{ $json.body.data.foto }}",
+            "fechaEntregado": "={{ $json.body.data.fechaEntregado }}"
+          },
+          "matchingColumns": [
+            "ID"
+          ],
+          "schema": [
+            {
+              "id": "id",
+              "displayName": "id",
+              "required": false,
+              "defaultMatch": true,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "bloque",
+              "displayName": "bloque",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "apto",
+              "displayName": "apto",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "destinatario",
+              "displayName": "destinatario",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "courier",
+              "displayName": "courier",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "foto",
+              "displayName": "foto",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "estado",
+              "displayName": "estado",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "fechaRecibido",
+              "displayName": "fechaRecibido",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "fechaEntregado",
+              "displayName": "fechaEntregado",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "firmaRetiro",
+              "displayName": "firmaRetiro",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "row_number",
+              "displayName": "row_number",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "number",
+              "canBeUsedToMatch": true,
+              "readOnly": true,
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        384,
+        960
+      ],
+      "id": "b72316f6-edd4-46a5-9214-d2bf87bbe701",
+      "name": "REGISTRAR_PAQUETE",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "Wh3cLB8zKmzwu2yG",
+          "name": "Google Sheets account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "documentId": {
+          "__rl": true,
+          "value": "1irMIbb6wPQiGu1M286Do9fKuAyXU-Vb4HQHph2IlYrE",
+          "mode": "list",
+          "cachedResultName": "parqueadero conjunto",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1irMIbb6wPQiGu1M286Do9fKuAyXU-Vb4HQHph2IlYrE/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 758656351,
+          "mode": "list",
+          "cachedResultName": "paquetes",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1irMIbb6wPQiGu1M286Do9fKuAyXU-Vb4HQHph2IlYrE/edit#gid=758656351"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "row_number": 0,
+            "id": "={{ $json.body.data.id }}",
+            "bloque": "={{ $json.body.data.bloque }}",
+            "apto": "={{ $json.body.data.apto }}",
+            "estado": "=Entregado",
+            "destinatario": "={{ $json.body.data.destinatario }}",
+            "courier": "={{ $json.body.data.courier }}",
+            "fechaRecibido": "={{ $json.body.data.fechaRecibido }}",
+            "firmaRetiro": "={{ $json.body.data.firmaRetiro }}",
+            "foto": "={{ $json.body.data.foto }}",
+            "fechaEntregado": "={{ $json.body.data.fechaEntregado }}"
+          },
+          "matchingColumns": [
+            "ID"
+          ],
+          "schema": [
+            {
+              "id": "id",
+              "displayName": "id",
+              "required": false,
+              "defaultMatch": true,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "bloque",
+              "displayName": "bloque",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "apto",
+              "displayName": "apto",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "destinatario",
+              "displayName": "destinatario",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "courier",
+              "displayName": "courier",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "foto",
+              "displayName": "foto",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "estado",
+              "displayName": "estado",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "fechaRecibido",
+              "displayName": "fechaRecibido",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "fechaEntregado",
+              "displayName": "fechaEntregado",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "firmaRetiro",
+              "displayName": "firmaRetiro",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "row_number",
+              "displayName": "row_number",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "number",
+              "canBeUsedToMatch": true,
+              "readOnly": true,
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        528,
+        1072
+      ],
+      "id": "8d5e6101-eae1-446c-b40b-091dbf7276f1",
+      "name": "ENTREGAR_PAQUETE",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "Wh3cLB8zKmzwu2yG",
+          "name": "Google Sheets account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "append",
+        "documentId": {
+          "__rl": true,
+          "value": "1irMIbb6wPQiGu1M286Do9fKuAyXU-Vb4HQHph2IlYrE",
+          "mode": "list",
+          "cachedResultName": "parqueadero conjunto",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1irMIbb6wPQiGu1M286Do9fKuAyXU-Vb4HQHph2IlYrE/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 1821917736,
+          "mode": "list",
+          "cachedResultName": "turnos",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1irMIbb6wPQiGu1M286Do9fKuAyXU-Vb4HQHph2IlYrE/edit#gid=1821917736"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "id": "={{ $json.body.data.id }}",
+            "name": "={{ $json.body.data.name }}",
+            "phone": "={{ $json.body.data.phone }}",
+            "timestamp": "={{ $json.body.data.timestamp }}",
+            "email": "={{ $json.body.data.email }}",
+            "username": "={{ $json.body.data.username }}",
+            "rol": "={{ $json.body.data.rol }}",
+            "evento": "={{ $json.body.data.evento }}"
+          },
+          "matchingColumns": [
+            "ID"
+          ],
+          "schema": [
+            {
+              "id": "id",
+              "displayName": "id",
+              "required": false,
+              "defaultMatch": true,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "username",
+              "displayName": "username",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "name",
+              "displayName": "name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "email",
+              "displayName": "email",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "phone",
+              "displayName": "phone",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "rol",
+              "displayName": "rol",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "timestamp",
+              "displayName": "timestamp",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "evento",
+              "displayName": "evento",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        384,
+        1200
+      ],
+      "id": "2d8a60e3-fad2-4792-a75d-f96283830151",
+      "name": "INGRESO_TURNO",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "Wh3cLB8zKmzwu2yG",
+          "name": "Google Sheets account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "documentId": {
+          "__rl": true,
+          "value": "1irMIbb6wPQiGu1M286Do9fKuAyXU-Vb4HQHph2IlYrE",
+          "mode": "list",
+          "cachedResultName": "parqueadero conjunto",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1irMIbb6wPQiGu1M286Do9fKuAyXU-Vb4HQHph2IlYrE/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 1821917736,
+          "mode": "list",
+          "cachedResultName": "turnos",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1irMIbb6wPQiGu1M286Do9fKuAyXU-Vb4HQHph2IlYrE/edit#gid=1821917736"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "row_number": 0,
+            "id": "={{ $json.body.data.id }}",
+            "name": "={{ $json.body.data.name }}",
+            "phone": "={{ $json.body.data.phone }}",
+            "timestamp": "={{ $json.body.data.timestamp }}",
+            "email": "={{ $json.body.data.email }}",
+            "username": "={{ $json.body.data.username }}",
+            "rol": "={{ $json.body.data.rol }}",
+            "evento": "={{ $json.body.data.evento }}"
+          },
+          "matchingColumns": [
+            "ID"
+          ],
+          "schema": [
+            {
+              "id": "id",
+              "displayName": "id",
+              "required": false,
+              "defaultMatch": true,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "username",
+              "displayName": "username",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "name",
+              "displayName": "name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "email",
+              "displayName": "email",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "phone",
+              "displayName": "phone",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "rol",
+              "displayName": "rol",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "timestamp",
+              "displayName": "timestamp",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "evento",
+              "displayName": "evento",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "row_number",
+              "displayName": "row_number",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "number",
+              "canBeUsedToMatch": true,
+              "readOnly": true,
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        256,
+        1328
+      ],
+      "id": "ed64b5c2-56a2-4fce-bfbf-cfd308baceed",
+      "name": "SALIDA_TURNO",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "Wh3cLB8zKmzwu2yG",
+          "name": "Google Sheets account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "delete",
+        "documentId": {
+          "__rl": true,
+          "value": "1irMIbb6wPQiGu1M286Do9fKuAyXU-Vb4HQHph2IlYrE",
+          "mode": "list",
+          "cachedResultName": "parqueadero conjunto",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1irMIbb6wPQiGu1M286Do9fKuAyXU-Vb4HQHph2IlYrE/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 306559923,
+          "mode": "list",
+          "cachedResultName": "Usuarios",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1irMIbb6wPQiGu1M286Do9fKuAyXU-Vb4HQHph2IlYrE/edit#gid=306559923"
+        }
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        672,
+        544
+      ],
+      "id": "a0df549d-0abf-484c-a3c8-d4a7a3442b72",
+      "name": "ELIMINAR_USUARIO",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "Wh3cLB8zKmzwu2yG",
+          "name": "Google Sheets account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "path": "leerdatos",
+        "responseMode": "responseNode",
+        "options": {
+          "allowedOrigins": "https://keller9204.github.io"
+        }
+      },
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2.1,
+      "position": [
+        -272,
+        -64
+      ],
+      "id": "8011205d-3dc4-4dee-8ca7-1dda496d8e61",
+      "name": "Webhook",
+      "webhookId": "c0d21fe0-6b7e-4538-a16d-44a669d3101a"
+    },
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "escribirdatos",
+        "options": {
+          "allowedOrigins": "https://keller9204.github.io"
+        }
+      },
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2.1,
+      "position": [
+        -256,
+        640
+      ],
+      "id": "d1ce159a-d4e9-47ad-9a3f-f8a4f5e2612f",
+      "name": "Webhook1",
+      "webhookId": "c0d21fe0-6b7e-4538-a16d-44a669d3101a"
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "documentId": {
+          "__rl": true,
+          "value": "1irMIbb6wPQiGu1M286Do9fKuAyXU-Vb4HQHph2IlYrE",
+          "mode": "list",
+          "cachedResultName": "parqueadero conjunto",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1irMIbb6wPQiGu1M286Do9fKuAyXU-Vb4HQHph2IlYrE/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 761048947,
+          "mode": "list",
+          "cachedResultName": "config",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1irMIbb6wPQiGu1M286Do9fKuAyXU-Vb4HQHph2IlYrE/edit#gid=761048947"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "tarifaCarro": "={{ $json.body.data.tarifaCarro }}",
+            "tarifaMoto": "={{ $json.body.data.tarifaMoto }}",
+            "correoDestino": "={{ $json.body.data.correoDestino }}",
+            "row_number": 0,
+            "tarifaCancha": "={{ $json.body.data.tarifaCancha }}",
+            "tarifaSalonSocial": "={{ $json.body.data.tarifaSalonSocial }}",
+            "tarifaZonaBbq": "={{ $json.body.data.tarifaZonaBbq }}",
+            "ID": "=1"
+          },
+          "matchingColumns": [
+            "ID"
+          ],
+          "schema": [
+            {
+              "id": "ID",
+              "displayName": "ID",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "tarifaCarro",
+              "displayName": "tarifaCarro",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "tarifaMoto",
+              "displayName": "tarifaMoto",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "tarifaSalonSocial",
+              "displayName": "tarifaSalonSocial",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "tarifaZonaBbq",
+              "displayName": "tarifaZonaBbq",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "tarifaCancha",
+              "displayName": "tarifaCancha",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "correoDestino",
+              "displayName": "correoDestino",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "row_number",
+              "displayName": "row_number",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "number",
+              "canBeUsedToMatch": true,
+              "readOnly": true,
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        976,
+        768
+      ],
+      "id": "1df0e27f-183b-49ff-ae3e-846ce492b178",
+      "name": "ACTUALIZAR_CONFIG1",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "Wh3cLB8zKmzwu2yG",
+          "name": "Google Sheets account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "amount": 2
+      },
+      "id": "wt1",
+      "name": "Wait-PostConfig",
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [
+        0,
+        -304
+      ],
+      "webhookId": "wt1"
+    },
+    {
+      "parameters": {
+        "amount": 2
+      },
+      "id": "wt2",
+      "name": "Wait-PostUsuarios",
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [
+        224,
+        -304
+      ],
+      "webhookId": "wt2"
+    },
+    {
+      "parameters": {
+        "amount": 2
+      },
+      "id": "wt3",
+      "name": "Wait-PostRegistros",
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [
+        448,
+        -304
+      ],
+      "webhookId": "wt3"
+    },
+    {
+      "parameters": {
+        "amount": 2
+      },
+      "id": "wt4",
+      "name": "Wait-PostReservas",
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [
+        656,
+        -304
+      ],
+      "webhookId": "wt4"
+    },
+    {
+      "parameters": {
+        "amount": 2
+      },
+      "id": "wt5",
+      "name": "Wait-PostMudanzas",
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [
+        880,
+        -304
+      ],
+      "webhookId": "wt5"
+    }
+  ],
+  "connections": {
+    "Leer Config": {
+      "main": [
+        [
+          {
+            "node": "Wait-PostConfig",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Leer Usuarios": {
+      "main": [
+        [
+          {
+            "node": "Wait-PostUsuarios",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Leer Registros": {
+      "main": [
+        [
+          {
+            "node": "Wait-PostRegistros",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Switch": {
+      "main": [
+        [
+          {
+            "node": "REGISTRAR_INGRESO",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "REGISTRAR_SALIDA",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "CREAR_USUARIO",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "ELIMINAR_USUARIO",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "ACTUALIZAR_CONFIG",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "ACTUALIZAR_CONFIG1",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "REGISTRAR_RESERVA",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "REGISTRAR_MUDANZA",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "REGISTRAR_PAQUETE",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "ENTREGAR_PAQUETE",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "INGRESO_TURNO",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "SALIDA_TURNO",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Leer Config",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "REGISTRAR_SALIDA": {
+      "main": [
+        [
+          {
+            "node": "Send a message1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code in JavaScript1": {
+      "main": [
+        [
+          {
+            "node": "Respond to Webhook",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Leer config 2": {
+      "main": [
+        [
+          {
+            "node": "Leer reservas",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Leer reservas": {
+      "main": [
+        [
+          {
+            "node": "Wait-PostReservas",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Leer mudanzas": {
+      "main": [
+        [
+          {
+            "node": "Wait-PostMudanzas",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Leer paquetes": {
+      "main": [
+        [
+          {
+            "node": "Code in JavaScript1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Leer turnos": {
+      "main": [
+        [
+          {
+            "node": "Code in JavaScript1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Webhook": {
+      "main": [
+        [
+          {
+            "node": "Leer Config",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Webhook1": {
+      "main": [
+        [
+          {
+            "node": "Switch",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wait-PostConfig": {
+      "main": [
+        [
+          {
+            "node": "Leer Usuarios",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wait-PostUsuarios": {
+      "main": [
+        [
+          {
+            "node": "Leer Registros",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wait-PostRegistros": {
+      "main": [
+        [
+          {
+            "node": "Leer reservas",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wait-PostReservas": {
+      "main": [
+        [
+          {
+            "node": "Leer mudanzas",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wait-PostMudanzas": {
+      "main": [
+        [
+          {
+            "node": "Leer paquetes",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate",
+    "availableInMCP": false,
+    "timeSavedMode": "fixed",
+    "timezone": "America/Bogota",
+    "callerPolicy": "workflowsFromSameOwner",
+    "saveExecutionProgress": true
+  },
+  "staticData": null,
+  "meta": {
+    "templateCredsSetupCompleted": true
+  },
+  "nodeGroups": [],
+  "pinData": {},
+  "versionId": "03e6a02f-b493-4667-adb0-46fc284a2af2",
+  "activeVersionId": "03e6a02f-b493-4667-adb0-46fc284a2af2",
+  "versionCounter": 212,
+  "triggerCount": 2,
+  "sourceWorkflowId": null,
+  "shared": [
+    {
+      "updatedAt": "2026-07-07T21:11:58.782Z",
+      "createdAt": "2026-07-07T21:11:58.782Z",
+      "role": "workflow:owner",
+      "workflowId": "aMFoQ0fCGvKQaSV0",
+      "projectId": "eDdOPyGtS6KjxxXT",
+      "project": {
+        "updatedAt": "2026-02-04T19:29:55.186Z",
+        "createdAt": "2026-02-04T19:25:57.186Z",
+        "id": "eDdOPyGtS6KjxxXT",
+        "name": "keller triana <kellertriana19@gmail.com>",
+        "type": "personal",
+        "icon": null,
+        "description": null,
+        "customTelemetryTags": [],
+        "creatorId": "b599a5da-9b40-4093-9d17-98ca6942b7ee"
+      }
+    }
+  ],
+  "tags": [],
+  "activeVersion": {
+    "updatedAt": "2026-08-03T18:44:28.000Z",
+    "createdAt": "2026-08-03T18:37:13.100Z",
+    "versionId": "03e6a02f-b493-4667-adb0-46fc284a2af2",
+    "workflowId": "aMFoQ0fCGvKQaSV0",
+    "nodes": [
+      {
+        "parameters": {
+          "rules": {
+            "values": [
+              {
+                "conditions": {
+                  "options": {
+                    "caseSensitive": true,
+                    "leftValue": "",
+                    "typeValidation": "strict",
+                    "version": 3
+                  },
+                  "conditions": [
+                    {
+                      "leftValue": "={{ $json.body.action }}",
+                      "rightValue": "REGISTRAR_INGRESO",
+                      "operator": {
+                        "type": "string",
+                        "operation": "equals"
+                      },
+                      "id": "2bcaa14c-450d-4d96-91a6-97fdee0741e0"
+                    }
+                  ],
+                  "combinator": "and"
+                },
+                "renameOutput": true,
+                "outputKey": "REGISTRAR_INGRESO"
+              },
+              {
+                "conditions": {
+                  "options": {
+                    "caseSensitive": true,
+                    "leftValue": "",
+                    "typeValidation": "strict",
+                    "version": 3
+                  },
+                  "conditions": [
+                    {
+                      "id": "dde0af71-13dd-43f9-9bfb-cef58ae17952",
+                      "leftValue": "={{ $json.body.action }}",
+                      "rightValue": "REGISTRAR_SALIDA",
+                      "operator": {
+                        "type": "string",
+                        "operation": "equals",
+                        "name": "filter.operator.equals"
+                      }
+                    }
+                  ],
+                  "combinator": "and"
+                },
+                "renameOutput": true,
+                "outputKey": "REGISTRAR_SALIDA"
+              },
+              {
+                "conditions": {
+                  "options": {
+                    "caseSensitive": true,
+                    "leftValue": "",
+                    "typeValidation": "strict",
+                    "version": 3
+                  },
+                  "conditions": [
+                    {
+                      "id": "256ff7ec-5007-42e0-aeea-1b76e745ee66",
+                      "leftValue": "={{ $json.body.action }}",
+                      "rightValue": "CREAR_USUARIO",
+                      "operator": {
+                        "type": "string",
+                        "operation": "equals",
+                        "name": "filter.operator.equals"
+                      }
+                    }
+                  ],
+                  "combinator": "and"
+                },
+                "renameOutput": true,
+                "outputKey": "CREAR_USUARIO"
+              },
+              {
+                "conditions": {
+                  "options": {
+                    "caseSensitive": true,
+                    "leftValue": "",
+                    "typeValidation": "strict",
+                    "version": 3
+                  },
+                  "conditions": [
+                    {
+                      "id": "ef0a7bef-bcd4-454f-a408-a5dde4fdeea5",
+                      "leftValue": "={{ $json.body.action }}",
+                      "rightValue": "ELIMINAR_USUARIO",
+                      "operator": {
+                        "type": "string",
+                        "operation": "equals",
+                        "name": "filter.operator.equals"
+                      }
+                    }
+                  ],
+                  "combinator": "and"
+                },
+                "renameOutput": true,
+                "outputKey": "ELIMINAR_USUARIO"
+              },
+              {
+                "conditions": {
+                  "options": {
+                    "caseSensitive": true,
+                    "leftValue": "",
+                    "typeValidation": "strict",
+                    "version": 3
+                  },
+                  "conditions": [
+                    {
+                      "id": "59c17292-b6d5-456c-a15b-fc44ac4d4d81",
+                      "leftValue": "={{ $json.body.action }}",
+                      "rightValue": "ACTUALIZAR_CONFIG",
+                      "operator": {
+                        "type": "string",
+                        "operation": "equals",
+                        "name": "filter.operator.equals"
+                      }
+                    }
+                  ],
+                  "combinator": "and"
+                },
+                "renameOutput": true,
+                "outputKey": "ACTUALIZAR_CONFIG"
+              },
+              {
+                "conditions": {
+                  "options": {
+                    "caseSensitive": true,
+                    "leftValue": "",
+                    "typeValidation": "strict",
+                    "version": 3
+                  },
+                  "conditions": [
+                    {
+                      "id": "fd1559d6-8f57-47f6-984f-01beafe26538",
+                      "leftValue": "={{ $json.body.action }}",
+                      "rightValue": "REGISTRAR_RESERVA",
+                      "operator": {
+                        "type": "string",
+                        "operation": "equals",
+                        "name": "filter.operator.equals"
+                      }
+                    }
+                  ],
+                  "combinator": "and"
+                },
+                "renameOutput": true,
+                "outputKey": "REGISTRAR_RESERVA"
+              },
+              {
+                "conditions": {
+                  "options": {
+                    "caseSensitive": true,
+                    "leftValue": "",
+                    "typeValidation": "strict",
+                    "version": 3
+                  },
+                  "conditions": [
+                    {
+                      "id": "11c25b8b-82c0-4967-b082-fc90e10de04e",
+                      "leftValue": "={{ $json.body.action }}",
+                      "rightValue": "REGISTRAR_MUDANZA",
+                      "operator": {
+                        "type": "string",
+                        "operation": "equals",
+                        "name": "filter.operator.equals"
+                      }
+                    }
+                  ],
+                  "combinator": "and"
+                },
+                "renameOutput": true,
+                "outputKey": "REGISTRAR_MUDANZA"
+              },
+              {
+                "conditions": {
+                  "options": {
+                    "caseSensitive": true,
+                    "leftValue": "",
+                    "typeValidation": "strict",
+                    "version": 3
+                  },
+                  "conditions": [
+                    {
+                      "id": "2b87e81e-63e7-4e31-abe3-f5b163d5b99d",
+                      "leftValue": "={{ $json.body.action }}",
+                      "rightValue": "REGISTRAR_PAQUETE",
+                      "operator": {
+                        "type": "string",
+                        "operation": "equals",
+                        "name": "filter.operator.equals"
+                      }
+                    }
+                  ],
+                  "combinator": "and"
+                },
+                "renameOutput": true,
+                "outputKey": "REGISTRAR_PAQUETE"
+              },
+              {
+                "conditions": {
+                  "options": {
+                    "caseSensitive": true,
+                    "leftValue": "",
+                    "typeValidation": "strict",
+                    "version": 3
+                  },
+                  "conditions": [
+                    {
+                      "id": "2438dbb2-1c15-4d80-8829-99e0949cd25e",
+                      "leftValue": "={{ $json.body.action }}",
+                      "rightValue": "ENTREGAR_PAQUETE",
+                      "operator": {
+                        "type": "string",
+                        "operation": "equals",
+                        "name": "filter.operator.equals"
+                      }
+                    }
+                  ],
+                  "combinator": "and"
+                },
+                "renameOutput": true,
+                "outputKey": "ENTREGAR_PAQUETE"
+              },
+              {
+                "conditions": {
+                  "options": {
+                    "caseSensitive": true,
+                    "leftValue": "",
+                    "typeValidation": "strict",
+                    "version": 3
+                  },
+                  "conditions": [
+                    {
+                      "id": "6daae6d0-f60c-42f3-a57e-cf55ebe406a4",
+                      "leftValue": "={{ $json.body.action }}",
+                      "rightValue": "INGRESO_TURNO",
+                      "operator": {
+                        "type": "string",
+                        "operation": "equals",
+                        "name": "filter.operator.equals"
+                      }
+                    }
+                  ],
+                  "combinator": "and"
+                },
+                "renameOutput": true,
+                "outputKey": "INGRESO_TURNO"
+              },
+              {
+                "conditions": {
+                  "options": {
+                    "caseSensitive": true,
+                    "leftValue": "",
+                    "typeValidation": "strict",
+                    "version": 3
+                  },
+                  "conditions": [
+                    {
+                      "id": "581ba234-377a-4442-b900-e546311cccf8",
+                      "leftValue": "={{ $json.body.action }}",
+                      "rightValue": "SALIDA_TURNO",
+                      "operator": {
+                        "type": "string",
+                        "operation": "equals",
+                        "name": "filter.operator.equals"
+                      }
+                    }
+                  ],
+                  "combinator": "and"
+                },
+                "renameOutput": true,
+                "outputKey": "SALIDA_TURNO"
+              }
+            ]
+          },
+          "options": {}
+        },
+        "type": "n8n-nodes-base.switch",
+        "typeVersion": 3.4,
+        "position": [
+          -48,
+          496
+        ],
+        "id": "1abe17b8-97d0-4a03-9bc3-52678524a3a7",
+        "name": "Switch"
+      },
+      {
+        "parameters": {
+          "documentId": {
+            "__rl": true,
+            "value": "1irMIbb6wPQiGu1M286Do9fKuAyXU-Vb4HQHph2IlYrE",
+            "mode": "list",
+            "cachedResultName": "parqueadero conjunto",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1irMIbb6wPQiGu1M286Do9fKuAyXU-Vb4HQHph2IlYrE/edit?usp=drivesdk"
+          },
+          "sheetName": {
+            "__rl": true,
+            "value": 761048947,
+            "mode": "list",
+            "cachedResultName": "config",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1irMIbb6wPQiGu1M286Do9fKuAyXU-Vb4HQHph2IlYrE/edit#gid=761048947"
+          },
+          "options": {}
+        },
+        "type": "n8n-nodes-base.googleSheets",
+        "typeVersion": 4.7,
+        "position": [
+          -48,
+          -64
+        ],
+        "id": "a9ac50f6-bbce-46aa-90f5-832354b4b3f8",
+        "name": "Leer Config",
+        "credentials": {
+          "googleSheetsOAuth2Api": {
+            "id": "Wh3cLB8zKmzwu2yG",
+            "name": "Google Sheets account 2"
+          }
+        }
+      },
+      {
+        "parameters": {
+          "documentId": {
+            "__rl": true,
+            "value": "1irMIbb6wPQiGu1M286Do9fKuAyXU-Vb4HQHph2IlYrE",
+            "mode": "list",
+            "cachedResultName": "parqueadero conjunto",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1irMIbb6wPQiGu1M286Do9fKuAyXU-Vb4HQHph2IlYrE/edit?usp=drivesdk"
+          },
+          "sheetName": {
+            "__rl": true,
+            "value": 306559923,
+            "mode": "list",
+            "cachedResultName": "Usuarios",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1irMIbb6wPQiGu1M286Do9fKuAyXU-Vb4HQHph2IlYrE/edit#gid=306559923"
+          },
+          "options": {}
+        },
+        "type": "n8n-nodes-base.googleSheets",
+        "typeVersion": 4.7,
+        "position": [
+          176,
+          -64
+        ],
+        "id": "6584e6cc-474a-4b71-88e6-a4eeed707228",
+        "name": "Leer Usuarios",
+        "credentials": {
+          "googleSheetsOAuth2Api": {
+            "id": "Wh3cLB8zKmzwu2yG",
+            "name": "Google Sheets account 2"
+          }
+        }
+      },
+      {
+        "parameters": {
+          "documentId": {
+            "__rl": true,
+            "value": "1irMIbb6wPQiGu1M286Do9fKuAyXU-Vb4HQHph2IlYrE",
+            "mode": "list",
+            "cachedResultName": "parqueadero conjunto",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1irMIbb6wPQiGu1M286Do9fKuAyXU-Vb4HQHph2IlYrE/edit?usp=drivesdk"
+          },
+          "sheetName": {
+            "__rl": true,
+            "value": 1965294910,
+            "mode": "list",
+            "cachedResultName": "Registros",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1irMIbb6wPQiGu1M286Do9fKuAyXU-Vb4HQHph2IlYrE/edit#gid=1965294910"
+          },
+          "options": {}
+        },
+        "type": "n8n-nodes-base.googleSheets",
+        "typeVersion": 4.7,
+        "position": [
+          400,
+          -64
+        ],
+        "id": "487c1f41-0961-4a69-8e65-2aace9e2c286",
+        "name": "Leer Registros",
+        "credentials": {
+          "googleSheetsOAuth2Api": {
+            "id": "Wh3cLB8zKmzwu2yG",
+            "name": "Google Sheets account 2"
+          }
+        }
+      },
+      {
+        "parameters": {
+          "options": {
+            "responseHeaders": {
+              "entries": [
+                {
+                  "name": "Access-Control-Allow-Origin",
+                  "value": "*"
+                },
+                {
+                  "name": "Access-Control-Allow-Methods",
+                  "value": "GET, POST, OPTIONS"
+                },
+                {
+                  "name": "Access-Control-Allow-Headers",
+                  "value": "Content-Type, Accept"
+                }
+              ]
+            }
+          }
+        },
+        "type": "n8n-nodes-base.respondToWebhook",
+        "typeVersion": 1.5,
+        "position": [
+          1808,
+          -64
+        ],
+        "id": "d2b98ab9-e748-44f3-8656-80b709ef481e",
+        "name": "Respond to Webhook"
+      },
+      {
+        "parameters": {
+          "operation": "update",
+          "documentId": {
+            "__rl": true,
+            "value": "1irMIbb6wPQiGu1M286Do9fKuAyXU-Vb4HQHph2IlYrE",
+            "mode": "list",
+            "cachedResultName": "parqueadero conjunto",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1irMIbb6wPQiGu1M286Do9fKuAyXU-Vb4HQHph2IlYrE/edit?usp=drivesdk"
+          },
+          "sheetName": {
+            "__rl": true,
+            "value": 1965294910,
+            "mode": "list",
+            "cachedResultName": "Registros",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1irMIbb6wPQiGu1M286Do9fKuAyXU-Vb4HQHph2IlYrE/edit#gid=1965294910"
+          },
+          "columns": {
+            "mappingMode": "defineBelow",
+            "value": {
+              "id": "={{ $json.body.data.id }}",
+              "tipo": "={{ $json.body.data.tipo }}",
+              "placa": "={{ $json.body.data.placa }}",
+              "estado": "Fuera",
+              "bloque": "={{ $json.body.data.bloque }}",
+              "apartamento": "={{ $json.body.data.apartamento }}",
+              "autoriza": "={{ $json.body.data.autoriza }}",
+              "telefono": "={{ $json.body.data.telefono }}",
+              "horaIngreso": "={{ $json.body.data.horaIngreso }}",
+              "firmaIngreso": "={{ $json.body.data.firmaIngreso }}",
+              "horaSalida": "={{ $json.body.data.horaSalida }}",
+              "firmaSalida": "={{ $json.body.data.firmaSalida }}",
+              "costo": "={{ $json.body.data.costo }}",
+              "row_number": 0
+            },
+            "matchingColumns": [
+              "placa"
+            ],
+            "schema": [
+              {
+                "id": "id",
+                "displayName": "id",
+                "required": false,
+                "defaultMatch": true,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true,
+                "removed": false
+              },
+              {
+                "id": "tipo",
+                "displayName": "tipo",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "placa",
+                "displayName": "placa",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true,
+                "removed": false
+              },
+              {
+                "id": "bloque",
+                "displayName": "bloque",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "apartamento",
+                "displayName": "apartamento",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "autoriza",
+                "displayName": "autoriza",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "telefono",
+                "displayName": "telefono",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "horaIngreso",
+                "displayName": "horaIngreso",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "firmaIngreso",
+                "displayName": "firmaIngreso",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "horaSalida",
+                "displayName": "horaSalida",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "firmaSalida",
+                "displayName": "firmaSalida",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "estado",
+                "displayName": "estado",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "costo",
+                "displayName": "costo",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "row_number",
+                "displayName": "row_number",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "number",
+                "canBeUsedToMatch": true,
+                "readOnly": true,
+                "removed": false
+              }
+            ],
+            "attemptToConvertTypes": false,
+            "convertFieldsToString": false
+          },
+          "options": {}
+        },
+        "type": "n8n-nodes-base.googleSheets",
+        "typeVersion": 4.7,
+        "position": [
+          400,
+          336
+        ],
+        "id": "da28fe93-7f2c-44ae-9a38-cb4e57ee2c61",
+        "name": "REGISTRAR_SALIDA",
+        "credentials": {
+          "googleSheetsOAuth2Api": {
+            "id": "Wh3cLB8zKmzwu2yG",
+            "name": "Google Sheets account 2"
+          }
+        }
+      },
+      {
+        "parameters": {
+          "operation": "appendOrUpdate",
+          "documentId": {
+            "__rl": true,
+            "value": "1irMIbb6wPQiGu1M286Do9fKuAyXU-Vb4HQHph2IlYrE",
+            "mode": "list",
+            "cachedResultName": "parqueadero conjunto",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1irMIbb6wPQiGu1M286Do9fKuAyXU-Vb4HQHph2IlYrE/edit?usp=drivesdk"
+          },
+          "sheetName": {
+            "__rl": true,
+            "value": 1965294910,
+            "mode": "list",
+            "cachedResultName": "Registros",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1irMIbb6wPQiGu1M286Do9fKuAyXU-Vb4HQHph2IlYrE/edit#gid=1965294910"
+          },
+          "columns": {
+            "mappingMode": "defineBelow",
+            "value": {
+              "id": "={{ $json.body.data.id }}",
+              "tipo": "={{ $json.body.data.tipo }}",
+              "placa": "={{ $json.body.data.placa }}",
+              "estado": "Dentro",
+              "bloque": "={{ $json.body.data.bloque }}",
+              "apartamento": "={{ $json.body.data.apartamento }}",
+              "autoriza": "={{ $json.body.data.autoriza }}",
+              "telefono": "={{ $json.body.data.telefono }}",
+              "horaIngreso": "={{ $json.body.data.horaIngreso }}",
+              "firmaIngreso": "={{ $json.body.data.firmaIngreso }}",
+              "horaSalida": "={{ $json.body.data.horaSalida }}",
+              "firmaSalida": "={{ $json.body.data.firmaSalida }}",
+              "costo": "={{ $json.body.data.costo }}"
+            },
+            "matchingColumns": [
+              "id"
+            ],
+            "schema": [
+              {
+                "id": "id",
+                "displayName": "id",
+                "required": false,
+                "defaultMatch": true,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true,
+                "removed": false
+              },
+              {
+                "id": "tipo",
+                "displayName": "tipo",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "placa",
+                "displayName": "placa",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "bloque",
+                "displayName": "bloque",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "apartamento",
+                "displayName": "apartamento",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "autoriza",
+                "displayName": "autoriza",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "telefono",
+                "displayName": "telefono",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "horaIngreso",
+                "displayName": "horaIngreso",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "firmaIngreso",
+                "displayName": "firmaIngreso",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "horaSalida",
+                "displayName": "horaSalida",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "firmaSalida",
+                "displayName": "firmaSalida",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "estado",
+                "displayName": "estado",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "costo",
+                "displayName": "costo",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true
+              }
+            ],
+            "attemptToConvertTypes": false,
+            "convertFieldsToString": false
+          },
+          "options": {}
+        },
+        "type": "n8n-nodes-base.googleSheets",
+        "typeVersion": 4.7,
+        "position": [
+          256,
+          224
+        ],
+        "id": "2bb200f6-b16d-4b90-8d79-ecf2ee6a4851",
+        "name": "REGISTRAR_INGRESO",
+        "credentials": {
+          "googleSheetsOAuth2Api": {
+            "id": "Wh3cLB8zKmzwu2yG",
+            "name": "Google Sheets account 2"
+          }
+        }
+      },
+      {
+        "parameters": {
+          "operation": "update",
+          "documentId": {
+            "__rl": true,
+            "value": "1irMIbb6wPQiGu1M286Do9fKuAyXU-Vb4HQHph2IlYrE",
+            "mode": "list",
+            "cachedResultName": "parqueadero conjunto",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1irMIbb6wPQiGu1M286Do9fKuAyXU-Vb4HQHph2IlYrE/edit?usp=drivesdk"
+          },
+          "sheetName": {
+            "__rl": true,
+            "value": "gid=0",
+            "mode": "list",
+            "cachedResultName": "Configuracion",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1irMIbb6wPQiGu1M286Do9fKuAyXU-Vb4HQHph2IlYrE/edit#gid=0"
+          },
+          "columns": {
+            "mappingMode": "defineBelow",
+            "value": {
+              "tarifaCarro": "={{ $json.body.data.tarifaCarro }}",
+              "tarifaMoto": "={{ $json.body.data.tarifaMoto }}",
+              "correoDestino": "={{ $json.body.data.correoDestino }}",
+              "ID": "=1",
+              "row_number": 0
+            },
+            "matchingColumns": [
+              "ID"
+            ],
+            "schema": [
+              {
+                "id": "ID",
+                "displayName": "ID",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true,
+                "removed": false
+              },
+              {
+                "id": "tarifaCarro",
+                "displayName": "tarifaCarro",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true,
+                "removed": false
+              },
+              {
+                "id": "tarifaMoto",
+                "displayName": "tarifaMoto",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "correoDestino",
+                "displayName": "correoDestino",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "row_number",
+                "displayName": "row_number",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "number",
+                "canBeUsedToMatch": true,
+                "readOnly": true,
+                "removed": false
+              }
+            ],
+            "attemptToConvertTypes": false,
+            "convertFieldsToString": false
+          },
+          "options": {}
+        },
+        "type": "n8n-nodes-base.googleSheets",
+        "typeVersion": 4.7,
+        "position": [
+          816,
+          656
+        ],
+        "id": "464ef79e-d269-410c-b628-fe9e9a9050e2",
+        "name": "ACTUALIZAR_CONFIG",
+        "credentials": {
+          "googleSheetsOAuth2Api": {
+            "id": "Wh3cLB8zKmzwu2yG",
+            "name": "Google Sheets account 2"
+          }
+        }
+      },
+      {
+        "parameters": {
+          "jsCode": "function safeRead(n){try{const r=$items(n);if(!Array.isArray(r)||r.length===0)return[];return r.map(i=>(i&&typeof i.json!=='undefined')?i.json:null).filter(Boolean);}catch(e){return[];}}function safeOne(n){const r=safeRead(n);return r.length>0?r[0]:{};}function parseZonas(raw){try{if(typeof raw==='string'&&raw.trim().startsWith('['))return JSON.parse(raw);if(Array.isArray(raw))return raw;}catch(e){}return[{nombre:'Salon Social',tarifa:150000},{nombre:'Zona BBQ',tarifa:50000},{nombre:'Cancha Multiple',tarifa:20000}];}const configRaw=safeOne('Leer Config');const usuarios=safeRead('Leer Usuarios');const registros=safeRead('Leer Registros');const reservas=safeRead('Leer reservas');const mudanzas=safeRead('Leer mudanzas');const paquetes=safeRead('Leer paquetes');const cfg={tarifaCarro:Number(configRaw.tarifaCarro)||50,tarifaMoto:Number(configRaw.tarifaMoto)||30,minutosGratisCarro:Number(configRaw.minutosGratisCarro)||0,minutosGratisMoto:Number(configRaw.minutosGratisMoto)||0,gratisCarroActivo:(configRaw.gratisCarroActivo==='true'||configRaw.gratisCarroActivo===true),gratisMotoActivo:(configRaw.gratisMotoActivo==='true'||configRaw.gratisMotoActivo===true),correoDestino:configRaw.correoDestino||'admin@conjunto.com',zonas:parseZonas(configRaw.zonas)};return[{json:{usuarios,registros,reservas,mudanzas,paquetes,config:cfg}}];"
+        },
+        "type": "n8n-nodes-base.code",
+        "typeVersion": 2,
+        "position": [
+          1584,
+          -64
+        ],
+        "id": "fa2cc627-74aa-4c93-bf69-d3f72dcb02e4",
+        "name": "Code in JavaScript1"
+      },
+      {
+        "parameters": {
+          "sendTo": "=kellertriana19@gmail.com",
+          "subject": "=Notificaci?n de Salida - Veh?culo {{ $json.placa }}",
+          "message": "=Dise?a tu plantilla usando las variables que necesitas pintar: {{ $json.costo }}, {{ $json.horaIngreso }}, {{ $json.horaSalida }}, e inserta las firmas usando etiquetas <img src=\"{{ $json.firmaSalida }}\">.",
+          "options": {}
+        },
+        "type": "n8n-nodes-base.gmail",
+        "typeVersion": 2.2,
+        "position": [
+          1040,
+          352
+        ],
+        "id": "9519f52c-4a90-42ba-b74b-07ca5d8e52c3",
+        "name": "Send a message1",
+        "webhookId": "00994ad7-afa3-4d9c-b286-483932bf328a",
+        "credentials": {
+          "gmailOAuth2": {
+            "id": "tYBrlwFYYF6lJUDc",
+            "name": "Gmail account"
+          }
+        }
+      },
+      {
+        "parameters": {
+          "documentId": {
+            "__rl": true,
+            "value": "1irMIbb6wPQiGu1M286Do9fKuAyXU-Vb4HQHph2IlYrE",
+            "mode": "list",
+            "cachedResultName": "parqueadero conjunto",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1irMIbb6wPQiGu1M286Do9fKuAyXU-Vb4HQHph2IlYrE/edit?usp=drivesdk"
+          },
+          "sheetName": {
+            "__rl": true,
+            "value": 761048947,
+            "mode": "list",
+            "cachedResultName": "config",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1irMIbb6wPQiGu1M286Do9fKuAyXU-Vb4HQHph2IlYrE/edit#gid=761048947"
+          },
+          "options": {}
+        },
+        "type": "n8n-nodes-base.googleSheets",
+        "typeVersion": 4.7,
+        "position": [
+          576,
+          -64
+        ],
+        "id": "a5102ebb-5804-4e2e-a640-893fe0aac4ab",
+        "name": "Leer config 2",
+        "credentials": {
+          "googleSheetsOAuth2Api": {
+            "id": "Wh3cLB8zKmzwu2yG",
+            "name": "Google Sheets account 2"
+          }
+        }
+      },
+      {
+        "parameters": {
+          "documentId": {
+            "__rl": true,
+            "value": "1irMIbb6wPQiGu1M286Do9fKuAyXU-Vb4HQHph2IlYrE",
+            "mode": "list",
+            "cachedResultName": "parqueadero conjunto",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1irMIbb6wPQiGu1M286Do9fKuAyXU-Vb4HQHph2IlYrE/edit?usp=drivesdk"
+          },
+          "sheetName": {
+            "__rl": true,
+            "value": 254347884,
+            "mode": "list",
+            "cachedResultName": "reservas",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1irMIbb6wPQiGu1M286Do9fKuAyXU-Vb4HQHph2IlYrE/edit#gid=254347884"
+          },
+          "options": {}
+        },
+        "type": "n8n-nodes-base.googleSheets",
+        "typeVersion": 4.7,
+        "position": [
+          784,
+          -64
+        ],
+        "id": "6c7c560b-0758-41b9-af13-a6c0ed19eb7a",
+        "name": "Leer reservas",
+        "credentials": {
+          "googleSheetsOAuth2Api": {
+            "id": "Wh3cLB8zKmzwu2yG",
+            "name": "Google Sheets account 2"
+          }
+        }
+      },
+      {
+        "parameters": {
+          "documentId": {
+            "__rl": true,
+            "value": "1irMIbb6wPQiGu1M286Do9fKuAyXU-Vb4HQHph2IlYrE",
+            "mode": "list",
+            "cachedResultName": "parqueadero conjunto",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1irMIbb6wPQiGu1M286Do9fKuAyXU-Vb4HQHph2IlYrE/edit?usp=drivesdk"
+          },
+          "sheetName": {
+            "__rl": true,
+            "value": 1761903702,
+            "mode": "list",
+            "cachedResultName": "mudanzas",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1irMIbb6wPQiGu1M286Do9fKuAyXU-Vb4HQHph2IlYrE/edit#gid=1761903702"
+          },
+          "options": {}
+        },
+        "type": "n8n-nodes-base.googleSheets",
+        "typeVersion": 4.7,
+        "position": [
+          976,
+          -64
+        ],
+        "id": "a7910656-a798-4b52-8b13-ef26ea0a67ba",
+        "name": "Leer mudanzas",
+        "credentials": {
+          "googleSheetsOAuth2Api": {
+            "id": "Wh3cLB8zKmzwu2yG",
+            "name": "Google Sheets account 2"
+          }
+        }
+      },
+      {
+        "parameters": {
+          "documentId": {
+            "__rl": true,
+            "value": "1irMIbb6wPQiGu1M286Do9fKuAyXU-Vb4HQHph2IlYrE",
+            "mode": "list",
+            "cachedResultName": "parqueadero conjunto",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1irMIbb6wPQiGu1M286Do9fKuAyXU-Vb4HQHph2IlYrE/edit?usp=drivesdk"
+          },
+          "sheetName": {
+            "__rl": true,
+            "value": 758656351,
+            "mode": "list",
+            "cachedResultName": "paquetes",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1irMIbb6wPQiGu1M286Do9fKuAyXU-Vb4HQHph2IlYrE/edit#gid=758656351"
+          },
+          "options": {}
+        },
+        "type": "n8n-nodes-base.googleSheets",
+        "typeVersion": 4.7,
+        "position": [
+          1168,
+          -64
+        ],
+        "id": "6ae5563f-d793-479a-ac37-5541e5e6dcf5",
+        "name": "Leer paquetes",
+        "credentials": {
+          "googleSheetsOAuth2Api": {
+            "id": "Wh3cLB8zKmzwu2yG",
+            "name": "Google Sheets account 2"
+          }
+        }
+      },
+      {
+        "parameters": {
+          "documentId": {
+            "__rl": true,
+            "value": "1irMIbb6wPQiGu1M286Do9fKuAyXU-Vb4HQHph2IlYrE",
+            "mode": "list",
+            "cachedResultName": "parqueadero conjunto",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1irMIbb6wPQiGu1M286Do9fKuAyXU-Vb4HQHph2IlYrE/edit?usp=drivesdk"
+          },
+          "sheetName": {
+            "__rl": true,
+            "value": 1821917736,
+            "mode": "list",
+            "cachedResultName": "turnos",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1irMIbb6wPQiGu1M286Do9fKuAyXU-Vb4HQHph2IlYrE/edit#gid=1821917736"
+          },
+          "options": {}
+        },
+        "type": "n8n-nodes-base.googleSheets",
+        "typeVersion": 4.7,
+        "position": [
+          1360,
+          -64
+        ],
+        "id": "389f1416-adba-4e2f-a2a2-1ce2549813f2",
+        "name": "Leer turnos",
+        "credentials": {
+          "googleSheetsOAuth2Api": {
+            "id": "Wh3cLB8zKmzwu2yG",
+            "name": "Google Sheets account 2"
+          }
+        }
+      },
+      {
+        "parameters": {
+          "operation": "append",
+          "documentId": {
+            "__rl": true,
+            "value": "1irMIbb6wPQiGu1M286Do9fKuAyXU-Vb4HQHph2IlYrE",
+            "mode": "list",
+            "cachedResultName": "parqueadero conjunto",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1irMIbb6wPQiGu1M286Do9fKuAyXU-Vb4HQHph2IlYrE/edit?usp=drivesdk"
+          },
+          "sheetName": {
+            "__rl": true,
+            "value": 306559923,
+            "mode": "list",
+            "cachedResultName": "Usuarios",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1irMIbb6wPQiGu1M286Do9fKuAyXU-Vb4HQHph2IlYrE/edit#gid=306559923"
+          },
+          "columns": {
+            "mappingMode": "defineBelow",
+            "value": {
+              "email": "={{ $json.body.data.usuarioCreado.email }}",
+              "pass": "={{ $json.body.data.usuarioCreado.pass }}",
+              "rol": "={{ $json.body.data.usuarioCreado.rol }}",
+              "name": "={{ $json.body.data.usuarioCreado.name }}",
+              "username": "={{ $json.body.data.usuarioCreado.username }}",
+              "phone": "={{ $json.body.data.usuarioCreado.phone }}",
+              "bloque": "={{ $json.body.data.usuarioCreado.bloque }}",
+              "apto": "={{ $json.body.data.usuarioCreado.apto }}"
+            },
+            "matchingColumns": [
+              "email"
+            ],
+            "schema": [
+              {
+                "id": "email",
+                "displayName": "email",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true,
+                "removed": false
+              },
+              {
+                "id": "pass",
+                "displayName": "pass",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true,
+                "removed": false
+              },
+              {
+                "id": "rol",
+                "displayName": "rol",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true,
+                "removed": false
+              },
+              {
+                "id": "name",
+                "displayName": "name",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true,
+                "removed": false
+              },
+              {
+                "id": "username",
+                "displayName": "username",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true,
+                "removed": false
+              },
+              {
+                "id": "phone",
+                "displayName": "phone",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true,
+                "removed": false
+              },
+              {
+                "id": "bloque",
+                "displayName": "bloque",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true,
+                "removed": false
+              },
+              {
+                "id": "apto",
+                "displayName": "apto",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true,
+                "removed": false
+              }
+            ],
+            "attemptToConvertTypes": false,
+            "convertFieldsToString": false
+          },
+          "options": {}
+        },
+        "type": "n8n-nodes-base.googleSheets",
+        "typeVersion": 4.7,
+        "position": [
+          544,
+          448
+        ],
+        "id": "9ea79ad0-3d2d-4d27-b85f-34b3f18b0dd9",
+        "name": "CREAR_USUARIO",
+        "credentials": {
+          "googleSheetsOAuth2Api": {
+            "id": "Wh3cLB8zKmzwu2yG",
+            "name": "Google Sheets account 2"
+          }
+        }
+      },
+      {
+        "parameters": {
+          "operation": "append",
+          "documentId": {
+            "__rl": true,
+            "value": "1irMIbb6wPQiGu1M286Do9fKuAyXU-Vb4HQHph2IlYrE",
+            "mode": "list",
+            "cachedResultName": "parqueadero conjunto",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1irMIbb6wPQiGu1M286Do9fKuAyXU-Vb4HQHph2IlYrE/edit?usp=drivesdk"
+          },
+          "sheetName": {
+            "__rl": true,
+            "value": 254347884,
+            "mode": "list",
+            "cachedResultName": "reservas",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1irMIbb6wPQiGu1M286Do9fKuAyXU-Vb4HQHph2IlYrE/edit#gid=254347884"
+          },
+          "columns": {
+            "mappingMode": "defineBelow",
+            "value": {
+              "id": "={{ $json.body.data.id }}",
+              "zona": "={{ $json.body.data.zona }}",
+              "bloque": "={{ $json.body.data.bloque }}",
+              "apto": "={{ $json.body.data.apto }}",
+              "nombre": "={{ $json.body.data.nombre }}",
+              "fecha": "={{ $json.body.data.fecha }}",
+              "hora": "={{ $json.body.data.hora }}",
+              "metodo": "={{ $json.body.data.metodo }}",
+              "comprobante": "={{ $json.body.data.comprobante }}",
+              "estado": "={{ $json.body.data.estado }}",
+              "timestap": "={{ $json.body.data.timestap }}"
+            },
+            "matchingColumns": [
+              "ID"
+            ],
+            "schema": [
+              {
+                "id": "id",
+                "displayName": "id",
+                "required": false,
+                "defaultMatch": true,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true,
+                "removed": false
+              },
+              {
+                "id": "zona",
+                "displayName": "zona",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true,
+                "removed": false
+              },
+              {
+                "id": "bloque",
+                "displayName": "bloque",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true,
+                "removed": false
+              },
+              {
+                "id": "apto",
+                "displayName": "apto",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true,
+                "removed": false
+              },
+              {
+                "id": "nombre",
+                "displayName": "nombre",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true,
+                "removed": false
+              },
+              {
+                "id": "fecha",
+                "displayName": "fecha",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true,
+                "removed": false
+              },
+              {
+                "id": "hora",
+                "displayName": "hora",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true,
+                "removed": false
+              },
+              {
+                "id": "metodo",
+                "displayName": "metodo",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true,
+                "removed": false
+              },
+              {
+                "id": "comprobante",
+                "displayName": "comprobante",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true,
+                "removed": false
+              },
+              {
+                "id": "estado",
+                "displayName": "estado",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true,
+                "removed": false
+              },
+              {
+                "id": "timestap",
+                "displayName": "timestap",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true,
+                "removed": false
+              }
+            ],
+            "attemptToConvertTypes": false,
+            "convertFieldsToString": false
+          },
+          "options": {}
+        },
+        "type": "n8n-nodes-base.googleSheets",
+        "typeVersion": 4.7,
+        "position": [
+          672,
+          768
+        ],
+        "id": "4dae321c-266e-45c5-8a1e-634c33a8ae95",
+        "name": "REGISTRAR_RESERVA",
+        "credentials": {
+          "googleSheetsOAuth2Api": {
+            "id": "Wh3cLB8zKmzwu2yG",
+            "name": "Google Sheets account 2"
+          }
+        }
+      },
+      {
+        "parameters": {
+          "operation": "append",
+          "documentId": {
+            "__rl": true,
+            "value": "1irMIbb6wPQiGu1M286Do9fKuAyXU-Vb4HQHph2IlYrE",
+            "mode": "list",
+            "cachedResultName": "parqueadero conjunto",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1irMIbb6wPQiGu1M286Do9fKuAyXU-Vb4HQHph2IlYrE/edit?usp=drivesdk"
+          },
+          "sheetName": {
+            "__rl": true,
+            "value": 1761903702,
+            "mode": "list",
+            "cachedResultName": "mudanzas",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1irMIbb6wPQiGu1M286Do9fKuAyXU-Vb4HQHph2IlYrE/edit#gid=1761903702"
+          },
+          "columns": {
+            "mappingMode": "defineBelow",
+            "value": {
+              "id": "={{ $json.body.data.id }}",
+              "bloque": "={{ $json.body.data.bloque }}",
+              "apto": "={{ $json.body.data.apto }}",
+              "fecha": "={{ $json.body.data.fecha }}",
+              "hora": "={{ $json.body.data.hora }}",
+              "estado": "={{ $json.body.data.estado }}",
+              "timestap": "={{ $json.body.data.timestap }}",
+              "empresa": "={{ $json.body.data.hora }}",
+              "tipo": "={{ $json.body.data.tipo }}",
+              "pazYSalvo": "={{ $json.body.data.pazYSalvo }}",
+              "placa": "={{ $json.body.data.empresa }}",
+              "operarios": "={{ $json.body.data.operarios }}"
+            },
+            "matchingColumns": [
+              "ID"
+            ],
+            "schema": [
+              {
+                "id": "id",
+                "displayName": "id",
+                "required": false,
+                "defaultMatch": true,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true,
+                "removed": false
+              },
+              {
+                "id": "bloque",
+                "displayName": "bloque",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true,
+                "removed": false
+              },
+              {
+                "id": "apto",
+                "displayName": "apto",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true,
+                "removed": false
+              },
+              {
+                "id": "fecha",
+                "displayName": "fecha",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true,
+                "removed": false
+              },
+              {
+                "id": "hora",
+                "displayName": "hora",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true,
+                "removed": false
+              },
+              {
+                "id": "empresa",
+                "displayName": "empresa",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true,
+                "removed": false
+              },
+              {
+                "id": "placa",
+                "displayName": "placa",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true,
+                "removed": false
+              },
+              {
+                "id": "tipo",
+                "displayName": "tipo",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true,
+                "removed": false
+              },
+              {
+                "id": "operarios",
+                "displayName": "operarios",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true,
+                "removed": false
+              },
+              {
+                "id": "pazYSalvo",
+                "displayName": "pazYSalvo",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true,
+                "removed": false
+              },
+              {
+                "id": "estado",
+                "displayName": "estado",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true,
+                "removed": false
+              },
+              {
+                "id": "timestap",
+                "displayName": "timestap",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true,
+                "removed": false
+              }
+            ],
+            "attemptToConvertTypes": false,
+            "convertFieldsToString": false
+          },
+          "options": {}
+        },
+        "type": "n8n-nodes-base.googleSheets",
+        "typeVersion": 4.7,
+        "position": [
+          528,
+          864
+        ],
+        "id": "f0b41cc7-b6f2-48af-bb75-44769749bc29",
+        "name": "REGISTRAR_MUDANZA",
+        "credentials": {
+          "googleSheetsOAuth2Api": {
+            "id": "Wh3cLB8zKmzwu2yG",
+            "name": "Google Sheets account 2"
+          }
+        }
+      },
+      {
+        "parameters": {
+          "operation": "append",
+          "documentId": {
+            "__rl": true,
+            "value": "1irMIbb6wPQiGu1M286Do9fKuAyXU-Vb4HQHph2IlYrE",
+            "mode": "list",
+            "cachedResultName": "parqueadero conjunto",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1irMIbb6wPQiGu1M286Do9fKuAyXU-Vb4HQHph2IlYrE/edit?usp=drivesdk"
+          },
+          "sheetName": {
+            "__rl": true,
+            "value": 758656351,
+            "mode": "list",
+            "cachedResultName": "paquetes",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1irMIbb6wPQiGu1M286Do9fKuAyXU-Vb4HQHph2IlYrE/edit#gid=758656351"
+          },
+          "columns": {
+            "mappingMode": "defineBelow",
+            "value": {
+              "row_number": 0,
+              "id": "={{ $json.body.data.id }}",
+              "bloque": "={{ $json.body.data.bloque }}",
+              "apto": "={{ $json.body.data.apto }}",
+              "estado": "=Registrado",
+              "destinatario": "={{ $json.body.data.destinatario }}",
+              "courier": "={{ $json.body.data.courier }}",
+              "fechaRecibido": "={{ $json.body.data.fechaRecibido }}",
+              "firmaRetiro": "={{ $json.body.data.firmaRetiro }}",
+              "foto": "={{ $json.body.data.foto }}",
+              "fechaEntregado": "={{ $json.body.data.fechaEntregado }}"
+            },
+            "matchingColumns": [
+              "ID"
+            ],
+            "schema": [
+              {
+                "id": "id",
+                "displayName": "id",
+                "required": false,
+                "defaultMatch": true,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true,
+                "removed": false
+              },
+              {
+                "id": "bloque",
+                "displayName": "bloque",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true,
+                "removed": false
+              },
+              {
+                "id": "apto",
+                "displayName": "apto",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true,
+                "removed": false
+              },
+              {
+                "id": "destinatario",
+                "displayName": "destinatario",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true,
+                "removed": false
+              },
+              {
+                "id": "courier",
+                "displayName": "courier",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true,
+                "removed": false
+              },
+              {
+                "id": "foto",
+                "displayName": "foto",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true,
+                "removed": false
+              },
+              {
+                "id": "estado",
+                "displayName": "estado",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true,
+                "removed": false
+              },
+              {
+                "id": "fechaRecibido",
+                "displayName": "fechaRecibido",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true,
+                "removed": false
+              },
+              {
+                "id": "fechaEntregado",
+                "displayName": "fechaEntregado",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true,
+                "removed": false
+              },
+              {
+                "id": "firmaRetiro",
+                "displayName": "firmaRetiro",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true,
+                "removed": false
+              },
+              {
+                "id": "row_number",
+                "displayName": "row_number",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "number",
+                "canBeUsedToMatch": true,
+                "readOnly": true,
+                "removed": false
+              }
+            ],
+            "attemptToConvertTypes": false,
+            "convertFieldsToString": false
+          },
+          "options": {}
+        },
+        "type": "n8n-nodes-base.googleSheets",
+        "typeVersion": 4.7,
+        "position": [
+          384,
+          960
+        ],
+        "id": "b72316f6-edd4-46a5-9214-d2bf87bbe701",
+        "name": "REGISTRAR_PAQUETE",
+        "credentials": {
+          "googleSheetsOAuth2Api": {
+            "id": "Wh3cLB8zKmzwu2yG",
+            "name": "Google Sheets account 2"
+          }
+        }
+      },
+      {
+        "parameters": {
+          "operation": "update",
+          "documentId": {
+            "__rl": true,
+            "value": "1irMIbb6wPQiGu1M286Do9fKuAyXU-Vb4HQHph2IlYrE",
+            "mode": "list",
+            "cachedResultName": "parqueadero conjunto",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1irMIbb6wPQiGu1M286Do9fKuAyXU-Vb4HQHph2IlYrE/edit?usp=drivesdk"
+          },
+          "sheetName": {
+            "__rl": true,
+            "value": 758656351,
+            "mode": "list",
+            "cachedResultName": "paquetes",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1irMIbb6wPQiGu1M286Do9fKuAyXU-Vb4HQHph2IlYrE/edit#gid=758656351"
+          },
+          "columns": {
+            "mappingMode": "defineBelow",
+            "value": {
+              "row_number": 0,
+              "id": "={{ $json.body.data.id }}",
+              "bloque": "={{ $json.body.data.bloque }}",
+              "apto": "={{ $json.body.data.apto }}",
+              "estado": "=Entregado",
+              "destinatario": "={{ $json.body.data.destinatario }}",
+              "courier": "={{ $json.body.data.courier }}",
+              "fechaRecibido": "={{ $json.body.data.fechaRecibido }}",
+              "firmaRetiro": "={{ $json.body.data.firmaRetiro }}",
+              "foto": "={{ $json.body.data.foto }}",
+              "fechaEntregado": "={{ $json.body.data.fechaEntregado }}"
+            },
+            "matchingColumns": [
+              "ID"
+            ],
+            "schema": [
+              {
+                "id": "id",
+                "displayName": "id",
+                "required": false,
+                "defaultMatch": true,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true,
+                "removed": false
+              },
+              {
+                "id": "bloque",
+                "displayName": "bloque",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true,
+                "removed": false
+              },
+              {
+                "id": "apto",
+                "displayName": "apto",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true,
+                "removed": false
+              },
+              {
+                "id": "destinatario",
+                "displayName": "destinatario",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true,
+                "removed": false
+              },
+              {
+                "id": "courier",
+                "displayName": "courier",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true,
+                "removed": false
+              },
+              {
+                "id": "foto",
+                "displayName": "foto",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true,
+                "removed": false
+              },
+              {
+                "id": "estado",
+                "displayName": "estado",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true,
+                "removed": false
+              },
+              {
+                "id": "fechaRecibido",
+                "displayName": "fechaRecibido",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true,
+                "removed": false
+              },
+              {
+                "id": "fechaEntregado",
+                "displayName": "fechaEntregado",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true,
+                "removed": false
+              },
+              {
+                "id": "firmaRetiro",
+                "displayName": "firmaRetiro",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true,
+                "removed": false
+              },
+              {
+                "id": "row_number",
+                "displayName": "row_number",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "number",
+                "canBeUsedToMatch": true,
+                "readOnly": true,
+                "removed": false
+              }
+            ],
+            "attemptToConvertTypes": false,
+            "convertFieldsToString": false
+          },
+          "options": {}
+        },
+        "type": "n8n-nodes-base.googleSheets",
+        "typeVersion": 4.7,
+        "position": [
+          528,
+          1072
+        ],
+        "id": "8d5e6101-eae1-446c-b40b-091dbf7276f1",
+        "name": "ENTREGAR_PAQUETE",
+        "credentials": {
+          "googleSheetsOAuth2Api": {
+            "id": "Wh3cLB8zKmzwu2yG",
+            "name": "Google Sheets account 2"
+          }
+        }
+      },
+      {
+        "parameters": {
+          "operation": "append",
+          "documentId": {
+            "__rl": true,
+            "value": "1irMIbb6wPQiGu1M286Do9fKuAyXU-Vb4HQHph2IlYrE",
+            "mode": "list",
+            "cachedResultName": "parqueadero conjunto",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1irMIbb6wPQiGu1M286Do9fKuAyXU-Vb4HQHph2IlYrE/edit?usp=drivesdk"
+          },
+          "sheetName": {
+            "__rl": true,
+            "value": 1821917736,
+            "mode": "list",
+            "cachedResultName": "turnos",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1irMIbb6wPQiGu1M286Do9fKuAyXU-Vb4HQHph2IlYrE/edit#gid=1821917736"
+          },
+          "columns": {
+            "mappingMode": "defineBelow",
+            "value": {
+              "id": "={{ $json.body.data.id }}",
+              "name": "={{ $json.body.data.name }}",
+              "phone": "={{ $json.body.data.phone }}",
+              "timestamp": "={{ $json.body.data.timestamp }}",
+              "email": "={{ $json.body.data.email }}",
+              "username": "={{ $json.body.data.username }}",
+              "rol": "={{ $json.body.data.rol }}",
+              "evento": "={{ $json.body.data.evento }}"
+            },
+            "matchingColumns": [
+              "ID"
+            ],
+            "schema": [
+              {
+                "id": "id",
+                "displayName": "id",
+                "required": false,
+                "defaultMatch": true,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true,
+                "removed": false
+              },
+              {
+                "id": "username",
+                "displayName": "username",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true,
+                "removed": false
+              },
+              {
+                "id": "name",
+                "displayName": "name",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true,
+                "removed": false
+              },
+              {
+                "id": "email",
+                "displayName": "email",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true,
+                "removed": false
+              },
+              {
+                "id": "phone",
+                "displayName": "phone",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true,
+                "removed": false
+              },
+              {
+                "id": "rol",
+                "displayName": "rol",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true,
+                "removed": false
+              },
+              {
+                "id": "timestamp",
+                "displayName": "timestamp",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true,
+                "removed": false
+              },
+              {
+                "id": "evento",
+                "displayName": "evento",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true,
+                "removed": false
+              }
+            ],
+            "attemptToConvertTypes": false,
+            "convertFieldsToString": false
+          },
+          "options": {}
+        },
+        "type": "n8n-nodes-base.googleSheets",
+        "typeVersion": 4.7,
+        "position": [
+          384,
+          1200
+        ],
+        "id": "2d8a60e3-fad2-4792-a75d-f96283830151",
+        "name": "INGRESO_TURNO",
+        "credentials": {
+          "googleSheetsOAuth2Api": {
+            "id": "Wh3cLB8zKmzwu2yG",
+            "name": "Google Sheets account 2"
+          }
+        }
+      },
+      {
+        "parameters": {
+          "operation": "update",
+          "documentId": {
+            "__rl": true,
+            "value": "1irMIbb6wPQiGu1M286Do9fKuAyXU-Vb4HQHph2IlYrE",
+            "mode": "list",
+            "cachedResultName": "parqueadero conjunto",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1irMIbb6wPQiGu1M286Do9fKuAyXU-Vb4HQHph2IlYrE/edit?usp=drivesdk"
+          },
+          "sheetName": {
+            "__rl": true,
+            "value": 1821917736,
+            "mode": "list",
+            "cachedResultName": "turnos",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1irMIbb6wPQiGu1M286Do9fKuAyXU-Vb4HQHph2IlYrE/edit#gid=1821917736"
+          },
+          "columns": {
+            "mappingMode": "defineBelow",
+            "value": {
+              "row_number": 0,
+              "id": "={{ $json.body.data.id }}",
+              "name": "={{ $json.body.data.name }}",
+              "phone": "={{ $json.body.data.phone }}",
+              "timestamp": "={{ $json.body.data.timestamp }}",
+              "email": "={{ $json.body.data.email }}",
+              "username": "={{ $json.body.data.username }}",
+              "rol": "={{ $json.body.data.rol }}",
+              "evento": "={{ $json.body.data.evento }}"
+            },
+            "matchingColumns": [
+              "ID"
+            ],
+            "schema": [
+              {
+                "id": "id",
+                "displayName": "id",
+                "required": false,
+                "defaultMatch": true,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true,
+                "removed": false
+              },
+              {
+                "id": "username",
+                "displayName": "username",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true,
+                "removed": false
+              },
+              {
+                "id": "name",
+                "displayName": "name",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true,
+                "removed": false
+              },
+              {
+                "id": "email",
+                "displayName": "email",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true,
+                "removed": false
+              },
+              {
+                "id": "phone",
+                "displayName": "phone",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true,
+                "removed": false
+              },
+              {
+                "id": "rol",
+                "displayName": "rol",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true,
+                "removed": false
+              },
+              {
+                "id": "timestamp",
+                "displayName": "timestamp",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true,
+                "removed": false
+              },
+              {
+                "id": "evento",
+                "displayName": "evento",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true,
+                "removed": false
+              },
+              {
+                "id": "row_number",
+                "displayName": "row_number",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "number",
+                "canBeUsedToMatch": true,
+                "readOnly": true,
+                "removed": false
+              }
+            ],
+            "attemptToConvertTypes": false,
+            "convertFieldsToString": false
+          },
+          "options": {}
+        },
+        "type": "n8n-nodes-base.googleSheets",
+        "typeVersion": 4.7,
+        "position": [
+          256,
+          1328
+        ],
+        "id": "ed64b5c2-56a2-4fce-bfbf-cfd308baceed",
+        "name": "SALIDA_TURNO",
+        "credentials": {
+          "googleSheetsOAuth2Api": {
+            "id": "Wh3cLB8zKmzwu2yG",
+            "name": "Google Sheets account 2"
+          }
+        }
+      },
+      {
+        "parameters": {
+          "operation": "delete",
+          "documentId": {
+            "__rl": true,
+            "value": "1irMIbb6wPQiGu1M286Do9fKuAyXU-Vb4HQHph2IlYrE",
+            "mode": "list",
+            "cachedResultName": "parqueadero conjunto",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1irMIbb6wPQiGu1M286Do9fKuAyXU-Vb4HQHph2IlYrE/edit?usp=drivesdk"
+          },
+          "sheetName": {
+            "__rl": true,
+            "value": 306559923,
+            "mode": "list",
+            "cachedResultName": "Usuarios",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1irMIbb6wPQiGu1M286Do9fKuAyXU-Vb4HQHph2IlYrE/edit#gid=306559923"
+          }
+        },
+        "type": "n8n-nodes-base.googleSheets",
+        "typeVersion": 4.7,
+        "position": [
+          672,
+          544
+        ],
+        "id": "a0df549d-0abf-484c-a3c8-d4a7a3442b72",
+        "name": "ELIMINAR_USUARIO",
+        "credentials": {
+          "googleSheetsOAuth2Api": {
+            "id": "Wh3cLB8zKmzwu2yG",
+            "name": "Google Sheets account 2"
+          }
+        }
+      },
+      {
+        "parameters": {
+          "path": "leerdatos",
+          "responseMode": "responseNode",
+          "options": {
+            "allowedOrigins": "https://keller9204.github.io"
+          }
+        },
+        "type": "n8n-nodes-base.webhook",
+        "typeVersion": 2.1,
+        "position": [
+          -272,
+          -64
+        ],
+        "id": "8011205d-3dc4-4dee-8ca7-1dda496d8e61",
+        "name": "Webhook",
+        "webhookId": "c0d21fe0-6b7e-4538-a16d-44a669d3101a"
+      },
+      {
+        "parameters": {
+          "httpMethod": "POST",
+          "path": "escribirdatos",
+          "options": {
+            "allowedOrigins": "https://keller9204.github.io"
+          }
+        },
+        "type": "n8n-nodes-base.webhook",
+        "typeVersion": 2.1,
+        "position": [
+          -256,
+          640
+        ],
+        "id": "d1ce159a-d4e9-47ad-9a3f-f8a4f5e2612f",
+        "name": "Webhook1",
+        "webhookId": "c0d21fe0-6b7e-4538-a16d-44a669d3101a"
+      },
+      {
+        "parameters": {
+          "operation": "update",
+          "documentId": {
+            "__rl": true,
+            "value": "1irMIbb6wPQiGu1M286Do9fKuAyXU-Vb4HQHph2IlYrE",
+            "mode": "list",
+            "cachedResultName": "parqueadero conjunto",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1irMIbb6wPQiGu1M286Do9fKuAyXU-Vb4HQHph2IlYrE/edit?usp=drivesdk"
+          },
+          "sheetName": {
+            "__rl": true,
+            "value": 761048947,
+            "mode": "list",
+            "cachedResultName": "config",
+            "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1irMIbb6wPQiGu1M286Do9fKuAyXU-Vb4HQHph2IlYrE/edit#gid=761048947"
+          },
+          "columns": {
+            "mappingMode": "defineBelow",
+            "value": {
+              "tarifaCarro": "={{ $json.body.data.tarifaCarro }}",
+              "tarifaMoto": "={{ $json.body.data.tarifaMoto }}",
+              "correoDestino": "={{ $json.body.data.correoDestino }}",
+              "row_number": 0,
+              "tarifaCancha": "={{ $json.body.data.tarifaCancha }}",
+              "tarifaSalonSocial": "={{ $json.body.data.tarifaSalonSocial }}",
+              "tarifaZonaBbq": "={{ $json.body.data.tarifaZonaBbq }}",
+              "ID": "=1"
+            },
+            "matchingColumns": [
+              "ID"
+            ],
+            "schema": [
+              {
+                "id": "ID",
+                "displayName": "ID",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true,
+                "removed": false
+              },
+              {
+                "id": "tarifaCarro",
+                "displayName": "tarifaCarro",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true,
+                "removed": false
+              },
+              {
+                "id": "tarifaMoto",
+                "displayName": "tarifaMoto",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "tarifaSalonSocial",
+                "displayName": "tarifaSalonSocial",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true,
+                "removed": false
+              },
+              {
+                "id": "tarifaZonaBbq",
+                "displayName": "tarifaZonaBbq",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true,
+                "removed": false
+              },
+              {
+                "id": "tarifaCancha",
+                "displayName": "tarifaCancha",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true,
+                "removed": false
+              },
+              {
+                "id": "correoDestino",
+                "displayName": "correoDestino",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "string",
+                "canBeUsedToMatch": true
+              },
+              {
+                "id": "row_number",
+                "displayName": "row_number",
+                "required": false,
+                "defaultMatch": false,
+                "display": true,
+                "type": "number",
+                "canBeUsedToMatch": true,
+                "readOnly": true,
+                "removed": false
+              }
+            ],
+            "attemptToConvertTypes": false,
+            "convertFieldsToString": false
+          },
+          "options": {}
+        },
+        "type": "n8n-nodes-base.googleSheets",
+        "typeVersion": 4.7,
+        "position": [
+          976,
+          768
+        ],
+        "id": "1df0e27f-183b-49ff-ae3e-846ce492b178",
+        "name": "ACTUALIZAR_CONFIG1",
+        "credentials": {
+          "googleSheetsOAuth2Api": {
+            "id": "Wh3cLB8zKmzwu2yG",
+            "name": "Google Sheets account 2"
+          }
+        }
+      },
+      {
+        "parameters": {
+          "amount": 2
+        },
+        "id": "wt1",
+        "name": "Wait-PostConfig",
+        "type": "n8n-nodes-base.wait",
+        "typeVersion": 1.1,
+        "position": [
+          0,
+          -304
+        ],
+        "webhookId": "wt1"
+      },
+      {
+        "parameters": {
+          "amount": 2
+        },
+        "id": "wt2",
+        "name": "Wait-PostUsuarios",
+        "type": "n8n-nodes-base.wait",
+        "typeVersion": 1.1,
+        "position": [
+          224,
+          -304
+        ],
+        "webhookId": "wt2"
+      },
+      {
+        "parameters": {
+          "amount": 2
+        },
+        "id": "wt3",
+        "name": "Wait-PostRegistros",
+        "type": "n8n-nodes-base.wait",
+        "typeVersion": 1.1,
+        "position": [
+          448,
+          -304
+        ],
+        "webhookId": "wt3"
+      },
+      {
+        "parameters": {
+          "amount": 2
+        },
+        "id": "wt4",
+        "name": "Wait-PostReservas",
+        "type": "n8n-nodes-base.wait",
+        "typeVersion": 1.1,
+        "position": [
+          656,
+          -304
+        ],
+        "webhookId": "wt4"
+      },
+      {
+        "parameters": {
+          "amount": 2
+        },
+        "id": "wt5",
+        "name": "Wait-PostMudanzas",
+        "type": "n8n-nodes-base.wait",
+        "typeVersion": 1.1,
+        "position": [
+          880,
+          -304
+        ],
+        "webhookId": "wt5"
+      }
+    ],
+    "connections": {
+      "Leer Config": {
+        "main": [
+          [
+            {
+              "node": "Wait-PostConfig",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Leer Usuarios": {
+        "main": [
+          [
+            {
+              "node": "Wait-PostUsuarios",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Leer Registros": {
+        "main": [
+          [
+            {
+              "node": "Wait-PostRegistros",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Switch": {
+        "main": [
+          [
+            {
+              "node": "REGISTRAR_INGRESO",
+              "type": "main",
+              "index": 0
+            }
+          ],
+          [
+            {
+              "node": "REGISTRAR_SALIDA",
+              "type": "main",
+              "index": 0
+            }
+          ],
+          [
+            {
+              "node": "CREAR_USUARIO",
+              "type": "main",
+              "index": 0
+            }
+          ],
+          [
+            {
+              "node": "ELIMINAR_USUARIO",
+              "type": "main",
+              "index": 0
+            }
+          ],
+          [
+            {
+              "node": "ACTUALIZAR_CONFIG",
+              "type": "main",
+              "index": 0
+            },
+            {
+              "node": "ACTUALIZAR_CONFIG1",
+              "type": "main",
+              "index": 0
+            }
+          ],
+          [
+            {
+              "node": "REGISTRAR_RESERVA",
+              "type": "main",
+              "index": 0
+            }
+          ],
+          [
+            {
+              "node": "REGISTRAR_MUDANZA",
+              "type": "main",
+              "index": 0
+            }
+          ],
+          [
+            {
+              "node": "REGISTRAR_PAQUETE",
+              "type": "main",
+              "index": 0
+            }
+          ],
+          [
+            {
+              "node": "ENTREGAR_PAQUETE",
+              "type": "main",
+              "index": 0
+            }
+          ],
+          [
+            {
+              "node": "INGRESO_TURNO",
+              "type": "main",
+              "index": 0
+            }
+          ],
+          [
+            {
+              "node": "SALIDA_TURNO",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "REGISTRAR_SALIDA": {
+        "main": [
+          [
+            {
+              "node": "Send a message1",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Code in JavaScript1": {
+        "main": [
+          [
+            {
+              "node": "Respond to Webhook",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Leer config 2": {
+        "main": [
+          [
+            {
+              "node": "Leer reservas",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Leer reservas": {
+        "main": [
+          [
+            {
+              "node": "Wait-PostReservas",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Leer mudanzas": {
+        "main": [
+          [
+            {
+              "node": "Wait-PostMudanzas",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Leer paquetes": {
+        "main": [
+          [
+            {
+              "node": "Code in JavaScript1",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Leer turnos": {
+        "main": [
+          [
+            {
+              "node": "Code in JavaScript1",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Webhook": {
+        "main": [
+          [
+            {
+              "node": "Leer Config",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Webhook1": {
+        "main": [
+          [
+            {
+              "node": "Leer Config",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Wait-PostConfig": {
+        "main": [
+          [
+            {
+              "node": "Leer Usuarios",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Wait-PostUsuarios": {
+        "main": [
+          [
+            {
+              "node": "Leer Registros",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Wait-PostRegistros": {
+        "main": [
+          [
+            {
+              "node": "Leer reservas",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Wait-PostReservas": {
+        "main": [
+          [
+            {
+              "node": "Leer mudanzas",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      },
+      "Wait-PostMudanzas": {
+        "main": [
+          [
+            {
+              "node": "Leer paquetes",
+              "type": "main",
+              "index": 0
+            }
+          ]
+        ]
+      }
+    },
+    "nodeGroups": [],
+    "authors": "keller triana",
+    "name": "Version 03e6a02f",
+    "description": "",
+    "autosaved": true,
+    "workflowPublishHistory": [
+      {
+        "createdAt": "2026-08-03T18:44:28.299Z",
+        "id": 141,
+        "workflowId": "aMFoQ0fCGvKQaSV0",
+        "versionId": "03e6a02f-b493-4667-adb0-46fc284a2af2",
+        "event": "activated",
+        "userId": "b599a5da-9b40-4093-9d17-98ca6942b7ee"
+      }
+    ]
+  }
+}
